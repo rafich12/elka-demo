@@ -1,0 +1,6 @@
+# Внутренние файлы: в публичный репозиторий не кладём
+research.md
+design-system.md
+phone-steps.json
+index-offline.html
+*.png

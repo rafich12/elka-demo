@@ -1,0 +1,2004 @@
+<!doctype html>
+<html lang="hy" data-palette="linen">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ELKA — կահույքի սրահ Աբովյանում</title>
+<meta name="description" content="ELKA՝ կահույքի սրահ և սեփական արտադրություն, Աբովյան, Երևանյան 1/34։ Բազմոցներ, ննջասենյակներ, ճաշասենյակներ և պատվերով խոհանոցներ։ Անվճար չափագրում, առաքում և տեղադրում։">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<!-- Пара: Noto Serif (+ Armenian) для заголовков, Google Sans для всего мелкого текста. Обе бесплатные (OFL) и с армянским -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wdth,wght@0,62.5..100,300..700;1,62.5..100,300..700&family=Noto+Serif+Armenian:wdth,wght@62.5..100,300..700&family=Google+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<!-- Демо: разметка для поисковиков, как в рабочей версии -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "ELKA",
+  "alternateName": ["Կահույք Էլկա", "Elka furniture"],
+  "telephone": "+37498911100",
+  "email": "elkakahuyq2020@mail.ru",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Երևանյան 1/34",
+    "addressLocality": "Աբովյան",
+    "addressRegion": "Կոտայք",
+    "addressCountry": "AM"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 40.2692081, "longitude": 44.6173565 },
+  "sameAs": ["https://www.facebook.com/Elkafurniture"]
+}
+</script>
+<style>
+  /* ============ СИСТЕМА СТИЛЕЙ (описание — design-system.md) ============ */
+
+  /* Палитры из салона: лён и орех, букле, графитовый велюр, тёмный орех */
+  :root, [data-palette="linen"] {
+    --bg: #f3efe8; --bg-2: #e9e2d7; --surface: #faf8f4;
+    --text: #231e1a; --muted: #6b6158; --line: rgba(35, 30, 26, .14);
+    --accent: #4a3628; --accent-ink: #f3efe8; --accent-2: #87633f;
+    --btn-bg: #2b221c; --btn-ink: #f3efe8;
+    --band-bg: #4a3628; --band-ink: #f3efe8;
+    --map-filter: grayscale(1) contrast(.85) brightness(1.06) sepia(.12);
+    color-scheme: light;
+  }
+  [data-palette="boucle"] {
+    --bg: #f6f3ee; --bg-2: #ece6dd; --surface: #fffdfa;
+    --text: #34302c; --muted: #736b63; --line: rgba(52, 48, 44, .15);
+    --accent: #6b5e52; --accent-ink: #f6f3ee; --accent-2: #7b6856;
+    --btn-bg: #4b4540; --btn-ink: #f6f3ee;
+    --band-bg: #cfc4b5; --band-ink: #2a2622;
+    --map-filter: grayscale(1) contrast(.8) brightness(1.08) sepia(.08);
+    color-scheme: light;
+  }
+  [data-palette="velvet"] {
+    --bg: #18191b; --bg-2: #202124; --surface: #292a2e;
+    --text: #ece8e1; --muted: #aaa59d; --line: rgba(214, 196, 168, .2);
+    --accent: #d6c4a8; --accent-ink: #18191b; --accent-2: #d9c29e;
+    --btn-bg: #d6c4a8; --btn-ink: #18191b;
+    --band-bg: #d6c4a8; --band-ink: #18191b;
+    --map-filter: grayscale(1) invert(.9) contrast(.85) brightness(.9);
+    color-scheme: dark;
+  }
+  [data-palette="walnut"] {
+    --bg: #16110d; --bg-2: #1e1712; --surface: #281f18;
+    --text: #f2eadf; --muted: #bba995; --line: rgba(200, 153, 106, .22);
+    --accent: #c8996a; --accent-ink: #16110d; --accent-2: #d4a878;
+    --btn-bg: #c8996a; --btn-ink: #16110d;
+    --band-bg: #c8996a; --band-ink: #16110d;
+    --map-filter: grayscale(1) invert(.9) contrast(.85) brightness(.9) sepia(.15);
+    color-scheme: dark;
+  }
+
+  :root {
+    --light: #f3efe8; --dark: #231e1a;
+    --ok: #4caf72; --red: #c8504b;
+    /* шрифты: антиква только для заголовков, всё мелкое — гротеск */
+    --serif: "Noto Serif", "Noto Serif Armenian", Georgia, serif;
+    --sans: "Google Sans", "Noto Sans Armenian", system-ui, -apple-system, "Segoe UI", sans-serif;
+    /* шкала текста */
+    /* название на первом экране зависит и от высоты окна: на невысоком ноутбуке блок иначе не помещается */
+    --t-display: clamp(120px, min(24vw, 32vh), 330px);
+    --t-h2: clamp(44px, 6.4vw, 96px);
+    --t-h3: clamp(28px, 3vw, 42px);
+    --t-statement: clamp(26px, 3vw, 44px);
+    --t-lead: clamp(17px, 1.4vw, 20px);
+    --t-body: 16.5px; --t-small: 14px; --t-micro: 12.5px;
+    /* отступы */
+    --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px;
+    /* отступ блока сверху и снизу; соседние блоки складывают отступы, поэтому не больше 120 px */
+    --section: clamp(64px, 8vw, 120px);
+    /* радиусы: подушка дивана — главная форма; спинка кресла с логотипа — вторая */
+    --r-s: 6px; --r-m: 16px; --r-l: 28px; --r-pill: 999px;
+    --r-cushion: 26% / 21%;
+    --r-cushion-s: 44px;
+    --r-back: 50% 50% 6px 6px / 34% 34% 6px 6px;
+    /* тени */
+    --sh-1: 0 6px 20px rgba(0, 0, 0, .08);
+    --sh-2: 0 24px 60px rgba(0, 0, 0, .2);
+    /* движение */
+    --ease: cubic-bezier(.22, 1, .36, 1);
+    --d1: .2s; --d2: .45s; --d3: .9s;
+    /* размеры */
+    --h-btn: 50px; --h-btn-s: 40px; --h-field: 48px;
+    --wrap: 1240px;
+  }
+
+  /* ============ База ============ */
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: var(--t-body)/1.65 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; overflow-x: clip; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body, section, footer, header.top, .mapbox, .map-bar, .map-pop, .band { transition: background-color var(--d2) var(--ease), color var(--d2) var(--ease); }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
+  svg { display: block; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--s6); }
+  .center { text-align: center; }
+
+  /* Типографика */
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-transform: uppercase; margin: 0; }
+  h1, h2 { font-stretch: 70%; letter-spacing: .01em; line-height: .98; }
+  h2 { font-size: var(--t-h2); }
+  h3 { font-size: var(--t-h3); font-weight: 500; font-stretch: 80%; letter-spacing: .02em; line-height: 1.1; }
+  .statement { font-family: var(--serif); font-weight: 400; font-stretch: 78%; text-transform: uppercase; font-size: var(--t-statement); line-height: 1.15; margin: var(--s5) 0 0; }
+  .it { font-family: var(--serif); font-style: italic; font-weight: 300; font-stretch: 90%; text-transform: none; color: var(--accent-2); }
+  :lang(hy) .it { font-style: normal; }
+  .lead { font-size: var(--t-lead); color: var(--muted); max-width: 34em; margin: var(--s5) 0 0; }
+  .center .lead { margin-left: auto; margin-right: auto; }
+  .micro { font-size: var(--t-micro); color: var(--muted); }
+
+  /* Кнопки */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--s3); min-height: var(--h-btn); padding: 0 26px; border: 0; border-radius: var(--r-pill); font: 500 15px/1 var(--sans); text-decoration: none; cursor: pointer; white-space: nowrap; transition: transform var(--d1) var(--ease), background-color var(--d1) var(--ease), color var(--d1) var(--ease), box-shadow var(--d2) var(--ease); }
+  .btn:hover { transform: translateY(-2px); box-shadow: var(--sh-1); }
+  .btn:active { transform: translateY(0) scale(.97); }
+  .btn .arr { width: 16px; height: 16px; transition: transform var(--d2) var(--ease); }
+  .btn:hover .arr { transform: translateX(4px); }
+  .btn-primary { background: var(--btn-bg); color: var(--btn-ink); }
+  .btn-light { background: var(--light); color: var(--dark); }
+  .btn-ghost { background: rgba(243,239,232,.14); color: var(--light); box-shadow: inset 0 0 0 1px rgba(243,239,232,.5); backdrop-filter: blur(6px); }
+  .btn-ghost:hover { background: var(--light); color: var(--dark); }
+  .btn-line { background: transparent; color: var(--text); box-shadow: inset 0 0 0 1px var(--text); }
+  .btn-line:hover { background: var(--text); color: var(--bg); }
+  .btn-s { min-height: var(--h-btn-s); padding: 0 18px; font-size: var(--t-small); }
+  .ulink { text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size var(--d2) var(--ease); }
+  .ulink:hover, .ulink[aria-current="true"] { background-size: 100% 1px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
+
+  /* Формы-мотивы: подушка дивана, спинка кресла (с логотипа), круг */
+  .cushion { border-radius: var(--r-cushion); overflow: hidden; }
+  .back { border-radius: var(--r-back); overflow: hidden; }
+  .circle { border-radius: 50%; overflow: hidden; }
+  .cushion img, .back img, .circle img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+  .cushion:hover img, .back:hover img, .circle:hover img { transform: scale(1.04); }
+  .tags { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s5); }
+  .tags span { font-size: var(--t-small); border: 1px solid var(--line); border-radius: var(--r-pill); padding: 7px 14px; }
+
+  /* Вращающийся бейдж с рейтингом */
+  .ring { position: relative; width: 150px; height: 150px; border-radius: 50%; background: var(--bg); box-shadow: var(--sh-1); display: grid; place-items: center; }
+  .ring svg { position: absolute; inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); animation: spin 26s linear infinite; }
+  .ring text { font: 600 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; fill: var(--muted); }
+  .ring b { font: 400 34px/1 var(--serif); font-stretch: 75%; color: var(--text); }
+  /* звезда высотой с цифру рейтинга */
+  .ring b small { font-size: 1em; line-height: 1; margin-left: .04em; color: var(--accent-2); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ============ Служебное: прогресс, полоса демо, шапка ============ */
+  .progress { position: fixed; left: 0; top: 0; height: 2px; width: 100%; background: var(--accent-2); transform: scaleX(0); transform-origin: 0 50%; z-index: 60; pointer-events: none; }
+  .demo-ribbon { background: var(--dark); color: var(--light); font: 500 var(--t-micro)/1.4 var(--sans); text-align: center; padding: 6px var(--s4); position: relative; z-index: 40; }
+  header.top { position: fixed; left: 0; right: 0; z-index: 30; color: var(--light); border-bottom: 1px solid transparent; transition: background-color var(--d2) var(--ease), color var(--d2) var(--ease), transform var(--d2) var(--ease), border-color var(--d2); }
+  header.top.solid { background: var(--bg); background: color-mix(in srgb, var(--bg) 94%, transparent); color: var(--text); backdrop-filter: blur(12px); border-color: var(--line); }
+  header.top.hide { transform: translateY(-110%); }
+  .top .wrap { display: flex; align-items: center; gap: 36px; height: 68px; }
+  .logo { display: flex; align-items: center; gap: var(--s2); text-decoration: none; font: 500 22px/1 var(--serif); font-stretch: 70%; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
+  .logo svg { width: 26px; height: 26px; }
+  nav.links { display: flex; gap: 30px; font-size: var(--t-small); }
+  .top-right { margin-left: auto; display: flex; align-items: center; gap: 18px; }
+  .lang { display: flex; gap: 2px; }
+  .lang button { border: 0; background: none; cursor: pointer; font: 600 var(--t-micro)/1 var(--sans); letter-spacing: .06em; color: inherit; opacity: .55; padding: 8px 6px; border-bottom: 1px solid transparent; transition: opacity var(--d1); }
+  .lang button:hover { opacity: .85; }
+  .lang button[aria-pressed="true"] { opacity: 1; border-color: currentColor; }
+  /* кнопка корзины в шапке: значок сумки и счётчик */
+  .cart-btn { position: relative; display: grid; place-items: center; width: 44px; height: 44px; flex: none; border-radius: 50%; border: 0; background: transparent; color: inherit; box-shadow: inset 0 0 0 1px currentColor; cursor: pointer; transition: transform var(--d2) var(--ease); }
+  .cart-btn:hover { transform: translateY(-2px); }
+  .cart-btn svg { width: 20px; height: 20px; }
+  .cart-badge { position: absolute; right: -4px; top: -4px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: var(--r-pill); background: var(--accent-2); color: var(--bg); font: normal 700 11px/20px var(--sans); text-align: center; transform: scale(0); transition: transform var(--d2) var(--ease); }
+  .cart-badge.on { transform: scale(1); }
+  .cart-badge.on.bump { animation: bump .5s var(--ease); }
+  @keyframes bump { 40% { transform: scale(1.45); } }
+
+  /* ============ Первый экран ============ */
+  .hero { position: relative; height: clamp(520px, 100vh, 1600px); display: grid; place-items: center; text-align: center; overflow: hidden; color: var(--light); }
+  .slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s ease; }
+  .slides img.on { opacity: 1; }
+  .slides img.first { animation: unblur 1.8s var(--ease) both; }
+  @keyframes unblur { from { filter: blur(18px); transform: scale(1.06); } to { filter: blur(0); transform: scale(1); } }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,19,15,.55) 0%, rgba(24,19,15,.28) 40%, rgba(24,19,15,.74) 100%); }
+  /* снизу отступ больше, чем сверху: блок стоит выше середины, сверху не остаётся пустоты, а кнопки не уходят под край */
+  .hero-in { position: relative; z-index: 2; width: 100%; min-width: 0; padding: 84px var(--s5) clamp(92px, 16vh, 240px); }
+  .hero-in > * { animation: rise var(--d3) var(--ease) both; }
+  .hero-in > :nth-child(2) { animation-delay: .12s; }
+  .hero-in > :nth-child(3) { animation-delay: .24s; }
+  .hero-in > :nth-child(4) { animation-delay: .36s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  .accent-line { font: italic 300 clamp(24px, min(2.8vw, 5vh), 38px)/1.1 var(--serif); font-stretch: 90%; }
+  :lang(hy) .accent-line { font-style: normal; }
+  /* название в одну строку; если шрифт шире (например, не загрузился), скрипт уменьшает размер */
+  .hero h1 { max-width: 100%; font-size: var(--t-display); font-weight: 300; font-stretch: 62.5%; line-height: .84; letter-spacing: .04em; margin: 8px 0 clamp(14px, 3vh, 26px); text-shadow: 0 6px 40px rgba(0,0,0,.25); white-space: nowrap; }
+  .hero h1 span { white-space: nowrap; }
+  .hero-text { font-size: var(--t-lead); line-height: 1.6; max-width: 36em; margin: 0 auto clamp(18px, 3.6vh, 34px); text-shadow: 0 2px 14px rgba(0,0,0,.45); }
+  .pills { display: flex; flex-wrap: wrap; gap: var(--s3); justify-content: center; }
+
+  /* ============ Секции ============ */
+  section { padding: var(--section) 0; }
+  .alt { background: var(--bg-2); }
+  /* изогнутый верх, как спинка дивана */
+  .curve-top { position: relative; }
+  /* дуга строго в ширину экрана: шире нельзя, иначе на старых iPhone страница съезжает вбок */
+  .curve-top::before { content: ""; position: absolute; left: 0; right: 0; top: -80px; height: 160px; background: inherit; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+  .curve-top > .wrap { position: relative; }
+
+  /* О нас: текст + композиция «подушка + круг + бейдж» */
+  .about { display: grid; grid-template-columns: 1.05fr .95fr; gap: var(--s8); align-items: center; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s6) var(--s5); margin-top: var(--s7); padding-top: var(--s6); border-top: 1px solid var(--line); }
+  .facts svg { width: 26px; height: 26px; color: var(--accent-2); margin-bottom: var(--s3); }
+  .facts b { display: block; font-weight: 600; font-size: 15.5px; margin-bottom: var(--s1); }
+  .facts span { color: var(--muted); font-size: var(--t-small); line-height: 1.55; }
+  .art { position: relative; aspect-ratio: 4 / 5; }
+  .art .cushion { position: absolute; right: 0; top: 0; width: 76%; height: 88%; }
+  .art .circle { position: absolute; left: 0; bottom: 0; width: 44%; aspect-ratio: 1; border: 8px solid var(--bg); }
+  .art .ring { position: absolute; left: 6%; top: 8%; }
+
+  /* Каталог: строки «фото — текст» в шахматном порядке */
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s9); align-items: center; margin-top: var(--s9); }
+  .row .media { aspect-ratio: 4 / 5; }
+  .row.rev .media { order: 2; }
+  .row p { color: var(--muted); font-size: var(--t-lead); max-width: 30em; margin: var(--s4) 0 0; }
+  .row-act { display: flex; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s6); }
+  .cap { display: inline-flex; align-items: center; gap: var(--s2); font-size: var(--t-micro); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); margin-bottom: var(--s3); }
+  .cap::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+
+  /* Коллаж с подписями (подписи — гротеском) */
+  .collage { position: relative; display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 64px; gap: var(--s4); margin-top: 110px; }
+  .collage figure { margin: 0; position: relative; }
+  /* все фото каталога — одна форма «подушка» со скруглёнными краями, как в строках выше */
+  .collage img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-cushion); }
+  .c1 { grid-column: 1 / 5; grid-row: 2 / 9; }
+  .c2 { grid-column: 5 / 8; grid-row: 1 / 5; }
+  .c3 { grid-column: 8 / 11; grid-row: 2 / 6; }
+  .c4 { grid-column: 11 / 13; grid-row: 4 / 7; }
+  .c5 { grid-column: 5 / 9; grid-row: 5 / 10; }
+  .c6 { grid-column: 9 / 12; grid-row: 6 / 11; }
+  .note { position: absolute; display: flex; align-items: flex-end; gap: var(--s1); font: italic 500 15px/1.2 var(--sans); color: var(--text); white-space: nowrap; pointer-events: none; }
+  :lang(hy) .note { font-style: normal; }
+  .note svg { width: 42px; height: 30px; color: var(--accent-2); flex: none; }
+  .n-top { top: -40px; left: 6px; }
+  .n-top-r { top: -40px; right: 6px; flex-direction: row-reverse; }
+  .n-top-r svg { transform: scaleX(-1); }
+  .n-bot { bottom: -42px; left: 10px; align-items: flex-start; }
+  .n-bot svg { transform: scaleY(-1); }
+  /* у крайнего правого фото подпись идёт от правого края: длинная армянская подпись иначе вылезает за экран */
+  .c6 .n-bot { left: auto; right: 4px; }
+  .sample-note { margin-top: 84px; font-size: var(--t-micro); color: var(--muted); }
+
+  /* Модели: карточки с фото, типом, ценой */
+  .sub-h { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s5); padding-bottom: var(--s5); border-bottom: 1px solid var(--line); }
+  .dgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s7) 22px; margin-top: var(--s7); }
+  .dcard { position: relative; margin: 0; }
+  /* у всех фото моделей одна форма — малая подушка со скруглёнными углами */
+  .dcard .ph { aspect-ratio: 4 / 5; border-radius: var(--r-cushion-s); overflow: hidden; background: var(--bg-2); }
+  .dcard img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+  .dcard:hover img { transform: scale(1.05); }
+  .dtype { display: block; margin-top: 14px; font-size: 11.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); }
+  .dtop { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s3); margin-top: 4px; }
+  .dname { border: 0; background: none; padding: 0; font: 600 16px/1.3 var(--sans); color: inherit; text-align: left; cursor: pointer; }
+  /* вся карточка нажимается: открывает модель в каталоге-книжке */
+  .dname::after { content: ""; position: absolute; inset: 0; }
+  .dtop em { font-style: normal; color: var(--accent-2); font-weight: 600; font-size: 14px; white-space: nowrap; }
+  .dcard p { margin: 6px 0 0; color: var(--muted); font-size: var(--t-small); line-height: 1.5; }
+  /* «В корзину» лежит поверх ссылки-карточки */
+  .dadd { position: relative; z-index: 2; margin-top: var(--s3); }
+  .dadd svg { width: 16px; height: 16px; }
+  .dadd.added, .bm-price .btn.added { background: var(--btn-bg); color: var(--btn-ink); box-shadow: none; }
+  .menu-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--s5); flex-wrap: wrap; margin-top: var(--s8); padding-top: var(--s5); border-top: 1px solid var(--line); }
+  .menu-foot p { margin: 0; font-size: var(--t-micro); color: var(--muted); max-width: 46em; }
+
+  /* Кухни на заказ: фото + шаги на «рулетке» */
+  .kit { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s9); align-items: center; }
+  .kit .btn { margin-top: var(--s6); }
+  .kit-art { position: relative; aspect-ratio: 5 / 4; }
+  .kit-art .cushion { position: absolute; left: 14%; right: 0; top: 0; bottom: 12%; }
+  .kit-art .circle { position: absolute; left: 0; bottom: 0; width: 34%; aspect-ratio: 1; border: 8px solid var(--bg-2); }
+  /* Маршрут заказа кухни. Пока скрипт не разложил его, это обычный список этапов (запасной вид) */
+  .route { position: relative; display: grid; gap: var(--s6); margin-top: var(--s9); color: var(--text); }
+  .route-svg { display: none; }
+  .stop { display: grid; grid-template-columns: auto 1fr; gap: var(--s4); align-items: start; }
+  .stop .ico { width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; background: var(--bg-2); border: 1px solid var(--line); color: var(--accent-2); transition: background-color var(--d2) var(--ease), color var(--d2) var(--ease), border-color var(--d2) var(--ease), transform var(--d2) var(--ease); }
+  .stop .ico svg { width: 26px; height: 26px; }
+  .stop.on .ico { background: var(--accent-2); border-color: var(--accent-2); color: var(--bg-2); transform: scale(1.08); }
+  .stop-text h3 { font-size: clamp(24px, 2.2vw, 32px); }
+  .stop-text p { color: var(--muted); font-size: clamp(14px, 1.05vw, 16.5px); line-height: 1.55; margin: var(--s2) 0 0; }
+  /* разложен скриптом: пунктир змейкой слева направо и обратно, этапы на поворотах, круг едет по линии */
+  .route.laid { display: block; }
+  .route.laid .route-svg { display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; }
+  .route.laid .stop { display: contents; }
+  .route.laid .stop .ico { position: absolute; z-index: 1; translate: -50% -50%; }
+  .route.laid .stop-text { position: absolute; }
+  .route.laid .stop-text.r { text-align: right; }
+  .route-base { fill: none; stroke: currentColor; stroke-opacity: .4; stroke-width: 1.6; stroke-dasharray: 7 9; stroke-linecap: round; }
+  .route-done { fill: none; stroke: var(--accent-2); stroke-width: 2.4; stroke-linecap: round; }
+  .route-dot { fill: var(--accent-2); stroke: var(--bg-2); stroke-width: 5; }
+
+  /* Плашка с призывом: строчка по краю, как шов на подушке */
+  .band { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; gap: var(--s6); align-items: center; padding: var(--s8); border-radius: var(--r-l); background: var(--band-bg); color: var(--band-ink); }
+  .band::before { content: ""; position: absolute; inset: 10px; border: 1.5px dashed currentColor; border-radius: 20px; opacity: .5; pointer-events: none; }
+  .band::after { content: ""; position: absolute; right: -60px; bottom: -110px; width: 300px; height: 240px; border: 1px solid currentColor; border-radius: var(--r-cushion); opacity: .18; pointer-events: none; }
+  .band h2 { font-size: clamp(32px, 4vw, 56px); }
+  .band p { margin: var(--s3) 0 0; font-size: var(--t-small); opacity: .85; max-width: 36em; }
+  .band .btn { background: var(--band-ink); color: var(--band-bg); position: relative; z-index: 1; }
+
+  /* Отзывы */
+  .quote-wrap { display: grid; grid-template-columns: 120px 1fr; gap: var(--s5); max-width: 860px; margin: var(--s7) auto 0; text-align: left; }
+  .qmark { font: 400 150px/.8 var(--serif); color: var(--accent-2); }
+  .quote { font-size: clamp(20px, 2vw, 26px); line-height: 1.5; margin: 0 0 var(--s5); }
+  .chips-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .chip { display: inline-flex; align-items: center; gap: var(--s2); border: 1px solid var(--line); border-radius: var(--r-pill); padding: 8px 14px; font-size: var(--t-small); background: var(--surface); }
+  .chip b { font-weight: 700; }
+
+  /* Поля формы оформления заказа (в корзине). min-width и max-width — чтобы iPhone не раздувал поле даты */
+  .box { width: 100%; min-width: 0; max-width: 100%; min-height: var(--h-field); font: 15px/1.3 var(--sans); color: var(--text); background: transparent; border: 1px solid rgba(128, 128, 128, .45); border-color: color-mix(in srgb, var(--text) 28%, transparent); border-radius: 0; padding: 12px 14px; transition: border-color var(--d1), box-shadow var(--d1); }
+  .box::placeholder { color: var(--muted); }
+  .box:hover { border-color: rgba(128, 128, 128, .7); border-color: color-mix(in srgb, var(--text) 50%, transparent); }
+  .box:focus { outline: none; border-color: var(--text); box-shadow: 0 0 0 3px rgba(135, 99, 63, .22); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 22%, transparent); }
+  .box.full { grid-column: 1 / -1; }
+  input.box::-webkit-date-and-time-value { text-align: left; }
+  @supports (-webkit-touch-callout: none) { input.box[type="date"] { -webkit-appearance: none; appearance: none; } }
+  textarea.box { min-height: 70px; resize: vertical; }
+  select.box { appearance: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23888' stroke-width='1.5'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 14px center; padding-right: 34px; cursor: pointer; }
+  select.box:has(option[value=""]:checked) { color: var(--muted); }
+  select.box option { background: var(--surface); color: var(--text); }
+  .flabel { grid-column: 1 / -1; font-size: var(--t-micro); color: var(--muted); margin: 4px 0 -4px; }
+  .consent { grid-column: 1 / -1; display: flex; gap: 9px; align-items: center; justify-content: center; font-size: var(--t-micro); color: var(--muted); margin: 8px 0 4px; text-align: center; }
+  .consent input { width: 15px; height: 15px; margin: 0; accent-color: var(--btn-bg); flex: none; }
+  .consent button { background: none; border: 0; padding: 0; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
+  .err { grid-column: 1 / -1; color: var(--red); font-size: var(--t-micro); margin-top: -4px; }
+  .err:empty { display: none; }
+  .submit { grid-column: 1 / -1; position: relative; min-height: var(--h-field); border: 0; background: var(--btn-bg); color: var(--btn-ink); font: 500 15px/1 var(--sans); letter-spacing: .02em; cursor: pointer; transition: filter var(--d1), transform var(--d1) var(--ease); }
+  .submit:hover { filter: brightness(1.15); }
+  .submit:active { transform: scale(.98); }
+  .submit.loading { color: transparent; pointer-events: none; }
+  .submit.loading::after { content: ""; position: absolute; left: 50%; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border: 2px solid var(--btn-ink); border-right-color: transparent; border-radius: 50%; animation: spin .7s linear infinite; }
+
+  /* Корзина: панель справа; шаги «список → оформление → готово» */
+  dialog.cart { margin: 0 0 0 auto; width: min(460px, 100%); max-width: 100%; height: 100%; max-height: 100%; border: 0; padding: 0; background: var(--bg); color: var(--text); border-radius: var(--r-cushion-s) 0 0 var(--r-cushion-s); box-shadow: var(--sh-2); }
+  dialog.cart[open] { animation: slideIn var(--d2) var(--ease); }
+  dialog.cart::backdrop { background: rgba(0,0,0,.55); }
+  @keyframes slideIn { from { transform: translateX(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .cart-in { height: 100%; display: flex; flex-direction: column; }
+  .cart-head { display: flex; align-items: center; justify-content: space-between; padding: 22px 18px 14px 28px; border-bottom: 1px solid var(--line); }
+  .cart-head h3 { font-size: 34px; }
+  .cart .bm-close { color: var(--text); }
+  .cart .bm-close:hover { background: var(--bg-2); }
+  .cart-body { flex: 1; overflow-y: auto; padding: 4px 28px 20px; overscroll-behavior: contain; }
+  .cart-item { display: grid; grid-template-columns: 72px 1fr auto; gap: 14px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); animation: rise var(--d2) var(--ease); }
+  .cart-item img { width: 72px; height: 72px; object-fit: cover; border-radius: 22px; background: var(--bg-2); }
+  .cart-item b { display: block; font-weight: 600; font-size: 15px; line-height: 1.3; }
+  .cart-item small { display: block; color: var(--muted); font-size: 12.5px; }
+  .cart-item em { display: block; font-style: normal; color: var(--accent-2); font-weight: 600; font-size: 14px; margin-top: 4px; }
+  .qty { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: var(--r-pill); }
+  .qty button { width: 32px; height: 32px; border: 0; background: none; color: var(--text); font: 500 17px/1 var(--sans); cursor: pointer; border-radius: 50%; transition: background-color var(--d1); }
+  .qty button:hover { background: var(--bg-2); }
+  .qty span { min-width: 22px; text-align: center; font-size: 14px; font-weight: 600; }
+  .cart-del { display: block; margin: 8px auto 0; border: 0; background: none; color: var(--muted); font: 12px var(--sans); text-decoration: underline; cursor: pointer; }
+  .cart-empty, .cart-done { text-align: center; padding: 48px 0 24px; color: var(--muted); }
+  .cart-empty svg, .cart-done svg { width: 46px; height: 46px; margin: 0 auto 14px; color: var(--accent-2); }
+  .cart-empty .btn, .cart-done .btn { margin-top: 18px; }
+  .cart-done h3 { color: var(--text); margin-bottom: 10px; }
+  #checkout { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 14px; }
+  .cart-back { grid-column: 1 / -1; justify-self: start; border: 0; background: none; padding: 4px 0 6px; color: var(--accent-2); font: 600 13px var(--sans); cursor: pointer; }
+  .cart-foot { padding: 16px 28px calc(20px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: var(--surface); }
+  .cart-row { display: flex; justify-content: space-between; gap: 12px; font-size: var(--t-small); color: var(--muted); }
+  .cart-row.total { margin-top: 6px; align-items: baseline; color: var(--text); font-size: 16px; }
+  .cart-row.total b { font: 500 28px/1.1 var(--serif); font-stretch: 80%; white-space: nowrap; }
+  .cart-foot .micro { margin: 8px 0 14px; }
+  .cart-foot .submit { display: block; width: 100%; }
+  .cart-foot .submit:disabled { opacity: .4; cursor: default; filter: none; }
+  dialog.cart[data-step="list"] #checkout, dialog.cart[data-step="list"] .cart-done,
+  dialog.cart[data-step="checkout"] .cart-list, dialog.cart[data-step="checkout"] #toCheckout, dialog.cart[data-step="checkout"] .cart-done,
+  dialog.cart[data-step="done"] .cart-list, dialog.cart[data-step="done"] #checkout, dialog.cart[data-step="done"] .cart-foot { display: none; }
+
+  /* Карта: плашка сверху, всплывающая карточка, метка */
+  .mapbox { position: relative; height: 640px; margin-top: var(--s7); border-radius: var(--r-l); overflow: hidden; border: 1px solid var(--line); background: var(--bg-2); }
+  /* метка стоит ровно в центре карты: карта отцентрована на адресе */
+  .map-canvas { position: absolute; inset: 0; display: block; cursor: pointer; }
+  .map-canvas iframe { width: 100%; height: 100%; border: 0; filter: var(--map-filter); pointer-events: none; }
+  .map-canvas::after { content: ""; position: absolute; inset: 0; background: rgba(243, 239, 232, .2); background: color-mix(in srgb, var(--bg) 22%, transparent); pointer-events: none; }
+  .map-bar { position: absolute; z-index: 3; top: var(--s5); left: 50%; transform: translateX(-50%); display: flex; align-items: center; background: var(--surface); border-radius: var(--r-pill); box-shadow: var(--sh-2); padding: var(--s2) var(--s2) var(--s2) var(--s4); white-space: nowrap; }
+  .map-bar .cell { padding: 4px 22px; }
+  .map-bar .cell + .cell { border-left: 1px solid var(--line); }
+  .map-bar small { display: block; font-size: 11.5px; color: var(--muted); }
+  .map-bar span, .map-bar a { font-size: var(--t-small); font-weight: 500; text-decoration: none; }
+  .map-pin { position: absolute; z-index: 2; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: var(--btn-bg); color: var(--btn-ink); display: grid; place-items: center; font: 500 20px/1 var(--serif); box-shadow: var(--sh-1); }
+  .map-pin::before, .map-pin::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--btn-bg); animation: pulse 2.4s var(--ease) infinite; }
+  .map-pin::after { animation-delay: 1.2s; }
+  @keyframes pulse { from { transform: scale(1); opacity: .6; } to { transform: scale(2.6); opacity: 0; } }
+  .map-pop { position: absolute; z-index: 3; left: calc(50% + 42px); top: 50%; width: 300px; transform: translateY(-50%); background: var(--surface); border-radius: var(--r-m); box-shadow: var(--sh-2); }
+  .map-pop::after { content: ""; position: absolute; left: -7px; top: 50%; width: 14px; height: 14px; background: var(--surface); transform: translateY(-50%) rotate(45deg); }
+  .pop-img { position: relative; height: 150px; margin: 10px 10px 0; border-radius: 12px; overflow: hidden; }
+  .pop-img img { width: 100%; height: 100%; object-fit: cover; }
+  .pop-img .badge { position: absolute; right: 8px; top: 8px; display: inline-flex; align-items: center; gap: 6px; background: var(--surface); color: var(--text); border-radius: var(--r-pill); padding: 5px 10px; font-size: 11.5px; font-weight: 600; }
+  .pop-body { padding: 14px 16px 16px; position: relative; z-index: 1; }
+  .pop-body h3 { font-size: 24px; letter-spacing: .1em; }
+  .pop-row { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .pop-row svg { width: 14px; height: 14px; flex: none; }
+  .pop-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .pop-foot b { font-size: 15px; }
+  .pop-foot b small { color: var(--muted); font-weight: 400; margin-left: 4px; }
+  .map-links { display: flex; justify-content: center; gap: var(--s5); margin-top: var(--s5); font-size: var(--t-small); }
+
+  /* Подвал */
+  footer { background: var(--bg-2); padding: 72px 0 30px; overflow: hidden; }
+  .fcols { display: grid; grid-template-columns: repeat(3, 1fr) 1.4fr; gap: var(--s6); font-size: var(--t-small); }
+  .fcols b { display: block; font-weight: 600; margin-bottom: var(--s3); }
+  .fcols a, .fcols button, .fcols span { display: block; width: fit-content; color: var(--muted); margin-bottom: 6px; background: none; border: 0; padding: 0; font: inherit; text-align: left; cursor: pointer; }
+  .fcols a:hover, .fcols button:hover { color: var(--text); }
+  .wordmark { font: 300 clamp(72px, 13vw, 200px)/.82 var(--serif); font-stretch: 62.5%; letter-spacing: .06em; text-transform: uppercase; text-align: right; margin: 50px 0 10px; }
+  .fbottom { display: flex; justify-content: space-between; gap: var(--s4); flex-wrap: wrap; color: var(--muted); font-size: var(--t-micro); }
+
+  /* Каталог-книжка: обложка с оглавлением, страница на каждую модель */
+  .cbook { max-width: 600px; width: calc(100% - 24px); height: min(820px, calc(100% - 24px)); border: 0; border-radius: var(--r-cushion-s) var(--r-cushion-s) var(--r-s) var(--r-s); padding: 0; background: #f5f1ea; color: #231e1a; }
+  .cbook[open] { animation: rise var(--d2) var(--ease); }
+  .cbook::backdrop { background: rgba(0,0,0,.72); }
+  .bm { position: relative; height: 100%; display: flex; flex-direction: column; }
+  .bm-head { display: flex; align-items: center; justify-content: space-between; gap: var(--s3); padding: 14px 14px 0 24px; }
+  .bm-tag { font-size: 11.5px; letter-spacing: .06em; color: #7a5a3f; border: 1px solid #dccfbd; padding: 6px 10px; border-radius: var(--r-pill); }
+  .bm-tabs { display: flex; gap: 6px; overflow-x: auto; padding: 12px 16px 12px; border-bottom: 1px solid #e3d9cb; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .bm-tabs::-webkit-scrollbar { display: none; }
+  .bm-tabs button { flex: none; border: 1px solid #dccfbd; background: none; border-radius: var(--r-pill); padding: 7px 13px; font: 500 13px/1 var(--sans); color: #5f564d; cursor: pointer; transition: background-color var(--d1), color var(--d1), border-color var(--d1); }
+  .bm-tabs button:hover { border-color: #7a5a3f; color: #231e1a; }
+  .bm-tabs button.on { background: #2b221c; border-color: #2b221c; color: #f5f1ea; }
+  .bm-pages { flex: 1; position: relative; overflow: hidden; }
+  .bm-page { position: absolute; inset: 0; padding: 26px 40px 24px; overflow-y: auto; opacity: 0; transform: translateX(24px); transition: opacity var(--d2), transform var(--d2) var(--ease); pointer-events: none; overscroll-behavior: contain; }
+  .bm-page.on { opacity: 1; transform: none; pointer-events: auto; }
+  .bm-page.bm-cover { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .bm-logo { font: 300 96px/.86 var(--serif); font-stretch: 62.5%; letter-spacing: .06em; text-transform: uppercase; }
+  .bm-sub { font: 600 var(--t-micro)/1 var(--sans); letter-spacing: .3em; text-transform: uppercase; color: #7a5a3f; margin: 16px 0 18px; }
+  .bm-note { max-width: 26em; color: #5f564d; font-size: 14.5px; margin: 0 0 22px; }
+  .bm-toc { display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px; width: 100%; max-width: 440px; text-align: left; }
+  .bm-toc button { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border: 0; border-bottom: 1px solid #e3d9cb; background: none; padding: 11px 2px; font: 500 15px/1.2 var(--sans); color: #231e1a; cursor: pointer; text-align: left; transition: color var(--d1), padding var(--d2) var(--ease); }
+  .bm-toc button small { font-size: 11.5px; color: #8a7f72; font-weight: 400; text-align: right; }
+  .bm-toc button:hover { color: #7a5a3f; padding-left: 8px; }
+  .bm-model img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--r-cushion-s); background: #e9e2d7; }
+  .bm-model .cap { color: #7a5a3f; margin: 20px 0 6px; }
+  .bm-model h3 { font-size: 40px; }
+  .bm-model > p { color: #5f564d; margin: 10px 0 0; font-size: 15px; }
+  .bm-feat { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
+  .bm-feat li { display: flex; gap: 10px; align-items: baseline; font-size: 14.5px; }
+  .bm-feat li::before { content: ""; flex: none; width: 14px; height: 1px; background: #7a5a3f; transform: translateY(-4px); }
+  .bm-price { display: flex; align-items: baseline; gap: 10px; margin-top: 18px; padding-top: 14px; border-top: 1px dashed #cdbfab; }
+  .bm-price > span { font-size: 13px; color: #8a7f72; }
+  .bm-price b { flex: 1; font-size: 18px; color: #231e1a; }
+  .bm-price .btn { background: #2b221c; color: #f5f1ea; }
+  .bm-nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 18px; border-top: 1px solid #e3d9cb; }
+  .bm-nav button, .bm-close { border: 0; background: none; cursor: pointer; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: #231e1a; transition: background-color var(--d1); }
+  .bm-nav button:hover, .bm-close:hover { background: #ebe3d6; }
+  .bm-nav button:disabled { opacity: .3; cursor: default; background: none; }
+  .bm-dots { display: flex; gap: 7px; }
+  .bm-dots span { width: 7px; height: 7px; border-radius: 50%; background: #d6cab8; transition: background-color var(--d1), transform var(--d1); }
+  .bm-dots span.on { background: #7a5a3f; transform: scale(1.3); }
+
+  dialog.policy { max-width: 520px; width: calc(100% - 32px); border: 1px solid var(--line); border-radius: var(--r-s); background: var(--surface); color: var(--text); padding: 32px; }
+  dialog.policy[open] { animation: rise var(--d2) var(--ease); }
+  dialog.policy::backdrop { background: rgba(0,0,0,.6); }
+  dialog.policy h3 { margin-bottom: 12px; }
+  dialog.policy p { color: var(--muted); }
+
+  /* Переключатель палитры (только для демо) */
+  .palette { position: fixed; left: 14px; top: 50%; transform: translateY(-50%); z-index: 36; display: flex; flex-direction: column; align-items: center; gap: 10px; background: rgba(24,19,15,.72); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.14); border-radius: var(--r-pill); padding: 12px 7px; font-size: 11px; color: #eee; }
+  .palette button { width: 26px; height: 26px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; padding: 0; transition: transform var(--d1) var(--ease); }
+  .palette button:hover { transform: scale(1.12); }
+  .palette button[aria-pressed="true"] { border-color: #fff; }
+  .palette [data-p="linen"] { background: linear-gradient(135deg, #f3efe8 50%, #87633f 50%); }
+  .palette [data-p="boucle"] { background: linear-gradient(135deg, #f6f3ee 50%, #cfc4b5 50%); }
+  .palette [data-p="velvet"] { background: linear-gradient(135deg, #202124 50%, #d6c4a8 50%); }
+  .palette [data-p="walnut"] { background: linear-gradient(135deg, #1e1712 50%, #c8996a 50%); }
+
+  /* ============ Анимация по скроллу, как в видео ============ */
+  /* Сцена закреплена: «подушка» раскрывается на весь экран, слова листаются вбок, следующий блок наезжает сверху */
+  .story { position: relative; height: 500vh; }
+  .story-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--bg); }
+  .story-center { position: absolute; inset: 0; z-index: 1; will-change: clip-path; }
+  .story-center img { width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+  .story-shade { position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(24,19,15,.2), rgba(24,19,15,.72)); opacity: 0; pointer-events: none; }
+  .scat { position: absolute; z-index: 0; margin: 0; overflow: hidden; border-radius: var(--r-s); will-change: transform, opacity; }
+  .scat img { width: 100%; height: 100%; object-fit: cover; }
+  .scat.is-cushion { border-radius: var(--r-cushion); }
+  .scat.is-back { border-radius: var(--r-back); }
+  .scat.is-circle { border-radius: 50%; }
+  .sc1 { left: 5%; top: 11%; width: 12vw; aspect-ratio: 3 / 4; }
+  .sc2 { left: 21%; top: 60%; width: 10vw; aspect-ratio: 1; }
+  .sc3 { left: 4%; top: 62%; width: 9vw; aspect-ratio: 4 / 5; }
+  .sc4 { left: 25%; top: 9%; width: 8vw; aspect-ratio: 1; }
+  .sc5 { left: 69%; top: 8%; width: 11vw; aspect-ratio: 4 / 3; }
+  .sc6 { left: 84%; top: 30%; width: 11vw; aspect-ratio: 3 / 4; }
+  .sc7 { left: 70%; top: 64%; width: 9vw; aspect-ratio: 1; }
+  .sc8 { left: 86%; top: 72%; width: 8vw; aspect-ratio: 4 / 5; }
+  .story-words { position: absolute; z-index: 3; left: 0; right: 0; top: 30%; color: var(--light); pointer-events: none; }
+  .track { display: flex; gap: 9vw; padding-left: 6vw; will-change: transform; }
+  .track span { font: 400 clamp(52px, 9vw, 240px)/.95 var(--serif); font-stretch: 66%; text-transform: uppercase; white-space: nowrap; opacity: 0; }
+  .story-sub { position: absolute; z-index: 3; right: 6vw; bottom: 12vh; width: min(380px, 80vw); height: 6em; color: var(--light); font-size: var(--t-lead); line-height: 1.5; }
+  .story-sub p { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; opacity: 0; transform: translateY(12px); transition: opacity var(--d2) var(--ease), transform var(--d2) var(--ease); }
+  .story-sub p.on { opacity: 1; transform: none; }
+  .story-free { position: absolute; z-index: 3; left: 6vw; bottom: 12vh; display: inline-flex; align-items: center; gap: 10px; color: var(--light); font-size: var(--t-small); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; opacity: 0; }
+  .story-free::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+  /* следующий блок наезжает на закреплённую сцену */
+  .cover { position: relative; z-index: 4; margin-top: -100vh; margin-top: -100svh; background: var(--bg); border-radius: var(--r-l) var(--r-l) 0 0; box-shadow: 0 -30px 60px rgba(0,0,0,.18); }
+  /* без анимаций: обычный блок с фото и словами */
+  .story.static { height: auto; }
+  .story.static .story-sticky { position: relative; height: 90vh; }
+  .story.static .scat { display: none; }
+  .story.static .story-shade { opacity: 1; }
+  .story.static .track { flex-direction: column; gap: 0; }
+  .story.static .track span { opacity: 1; font-size: clamp(40px, 6vw, 90px); }
+  .story.static .story-sub p:first-child { opacity: 1; transform: none; }
+  .story.static .story-free { opacity: 1; }
+  .story.static + .cover { margin-top: 0; }
+  @media (max-width: 720px) {
+    .sc5, .sc6, .sc7, .sc8 { display: none; }
+    .sc1 { left: 5%; top: 9%; width: 30vw; }
+    .sc2 { left: 64%; top: 7%; width: 30vw; }
+    .sc3 { left: 6%; top: 72%; width: 28vw; }
+    .sc4 { left: 66%; top: 74%; width: 28vw; }
+    .story-words { top: 24%; }
+    .track span { font-size: clamp(46px, 14vw, 80px); }
+    .story-sub { left: 18px; right: 18px; width: auto; bottom: 16vh; }
+    .story-free { left: 18px; bottom: auto; top: 18%; }
+  }
+
+  /* Появление при прокрутке */
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity var(--d3) var(--ease), transform var(--d3) var(--ease); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  /* фото открывает шторка цвета фона, уходящая вниз; сама картинка не обрезается, поэтому «ленивая» загрузка работает */
+  .cushion, .back { position: relative; }
+  .alt { --cur: var(--bg-2); }
+  .js .cushion.reveal::before, .js .back.reveal::before, .js .reveal .cushion::before { content: ""; position: absolute; inset: 0; z-index: 2; background: var(--cur, var(--bg)); transform-origin: 50% 100%; transition: transform 1.3s var(--ease); pointer-events: none; }
+  .js .cushion.reveal.in::before, .js .back.reveal.in::before, .js .reveal.in .cushion::before { transform: scaleY(0); }
+  .js .stagger > * { opacity: 0; transform: translateY(14px); transition: opacity var(--d3) var(--ease), transform var(--d3) var(--ease); transition-delay: calc(var(--i, 0) * 90ms); }
+  .js .stagger.in > * { opacity: 1; transform: none; }
+
+  .dock { display: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .js .reveal, .js .stagger > * { opacity: 1; transform: none; }
+    .js .cushion::before, .js .back::before { display: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 960px) {
+    nav.links { display: none; }
+    .about, .row, .kit { grid-template-columns: 1fr; gap: var(--s7); }
+    .row.rev .media { order: 0; }
+    .art { max-width: 520px; width: 100%; margin: 0 auto; }
+    .collage { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 70px; }
+    .c1 { grid-column: 1 / 4; grid-row: 1 / 6; }
+    .c2 { grid-column: 4 / 7; grid-row: 2 / 5; }
+    .c3 { grid-column: 4 / 7; grid-row: 6 / 10; }
+    .c4 { grid-column: 1 / 3; grid-row: 7 / 10; }
+    .c5 { grid-column: 1 / 4; grid-row: 11 / 15; }
+    .c6 { grid-column: 4 / 7; grid-row: 11 / 15; }
+    .dgrid { grid-template-columns: repeat(2, 1fr); }
+    .band { grid-template-columns: 1fr; padding: var(--s7) var(--s6); }
+    .fcols { grid-template-columns: 1fr 1fr; }
+    .map-bar { left: var(--s4); right: var(--s4); transform: none; border-radius: var(--r-m); flex-wrap: wrap; white-space: normal; padding: var(--s3); }
+    .map-bar .cell { padding: 4px 12px; }
+  }
+  /* переключатель цвета (только для демо) до 1360 px свёрнут в кружок внизу: иначе закрывает текст у левого края */
+  @media (max-width: 1360px) {
+    .palette { top: auto; bottom: 20px; left: 12px; transform: none; flex-direction: row; padding: 6px; }
+    .palette span { display: none; }
+    .palette:not(.open) button:not([aria-pressed="true"]) { display: none; }
+  }
+  /* Планшет: фото рядом с текстом, а не во всю ширину — иначе фото по 900 px в высоту, а текст теряется */
+  @media (min-width: 721px) and (max-width: 960px) {
+    .row, .kit { grid-template-columns: 1fr 1fr; gap: var(--s6); }
+    .row.rev .media { order: 2; }
+    .row { margin-top: var(--s8); }
+  }
+  @media (max-width: 720px) {
+    /* на телефоне отступы двух соседних блоков складывались в пустые полосы по 200 px — делаем их плотнее */
+    :root { --section: 64px; }
+    footer { padding-top: 48px; }
+    body { padding-bottom: 72px; font-size: 16px; }
+    .wrap { padding: 0 18px; }
+    .top .wrap { height: 60px; gap: var(--s4); }
+    .top-right { gap: 10px; }
+    .cart-btn { width: 40px; height: 40px; }
+    dialog.cart { border-radius: 0; }
+    .cart-head, .cart-body, .cart-foot { padding-left: 18px; padding-right: 18px; }
+    .logo { font-size: 20px; }
+    .hero { height: auto; min-height: 720px; }
+    /* снизу запас под нижнюю панель «Звонок / Корзина / Маршрут» */
+    .hero { display: flex; flex-direction: column; }
+    .hero-in { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 96px 18px 108px; }
+    .hero h1 { font-size: 44vw; }
+    .pills { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .pills .btn { padding: 0 12px; font-size: var(--t-small); white-space: normal; text-align: center; line-height: 1.2; }
+    .pills .btn .arr { display: none; }
+    .facts { grid-template-columns: 1fr; gap: var(--s5); }
+    .art .ring { width: 116px; height: 116px; }
+    .ring b { font-size: 26px; }
+    .ring text { font-size: 13px; }
+    .curve-top::before { top: -40px; height: 80px; }
+    .collage { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: auto; gap: 34px 12px; margin-top: var(--s8); }
+    .collage figure { grid-column: auto !important; grid-row: auto !important; }
+    .collage img { aspect-ratio: 3 / 4; height: auto; }
+    .collage .c1 { grid-column: 1 / -1 !important; }
+    .collage .c1 img { aspect-ratio: 4 / 3; }
+    .note { position: static; margin-top: var(--s2); white-space: normal; }
+    .note svg { display: none; }
+    .sample-note { margin-top: 30px; }
+    .sub-h { flex-direction: column; align-items: flex-start; }
+    .dgrid { gap: 34px 12px; }
+    .dtop { flex-direction: column; gap: 2px; }
+    .dcard p { font-size: 13px; }
+    .dcard .ph { border-radius: 34px; }
+    .dadd { width: 100%; padding: 0 10px; white-space: normal; line-height: 1.2; text-align: center; }
+    /* маршрут кухни на телефоне: значки меньше, повороты круче */
+    .stop .ico { width: 48px; height: 48px; }
+    .stop .ico svg { width: 22px; height: 22px; }
+    .stop-text h3 { font-size: 24px; }
+    .stop-text p { font-size: 13.5px; }
+    .quote-wrap { grid-template-columns: 1fr; gap: 0; }
+    .qmark { font-size: 100px; height: 60px; }
+    /* шрифт полей не меньше 16px, иначе iPhone приближает страницу при нажатии */
+    .box { font-size: 16px; }
+    /* на телефоне: плашка сверху, карта посередине, карточка снизу */
+    .mapbox { height: auto; display: flex; flex-direction: column; }
+    .map-bar { order: 0; position: relative; top: auto; left: auto; right: auto; border-radius: 0; box-shadow: none; border-bottom: 1px solid var(--line); padding: var(--s3); }
+    .map-bar .cell { flex: 1 1 100%; border-left: 0 !important; padding: 6px 8px; }
+    .map-bar .cell + .cell { border-top: 1px solid var(--line); }
+    .map-canvas { order: 1; position: relative; height: 340px; }
+    .map-pop { order: 2; position: relative; left: auto; top: auto; width: auto; transform: none; border-radius: 0; box-shadow: none; border-top: 1px solid var(--line); }
+    .map-pop::after { display: none; }
+    .fcols { grid-template-columns: 1fr; }
+    .wordmark { text-align: left; }
+    /* на телефоне палитра над нижней панелью */
+    .palette { bottom: 84px; }
+    .dock { display: grid; grid-template-columns: repeat(3, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 35; background: var(--bg); background: color-mix(in srgb, var(--bg) 96%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--line); padding: 8px 8px calc(8px + env(safe-area-inset-bottom)); }
+    .dock a { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; font-size: 12px; color: var(--muted); padding: 6px 0; }
+    .dock .cart-badge { right: calc(50% - 24px); top: 0; }
+    .dock a.primary { color: var(--accent-2); font-weight: 600; }
+    .dock svg { width: 21px; height: 21px; }
+    .bm-page { padding: 20px 20px 20px; }
+    .bm-logo { font-size: 76px; }
+    .bm-toc { grid-template-columns: 1fr; }
+    .bm-model h3 { font-size: 34px; }
+    .bm-price { flex-wrap: wrap; }
+    .bm-price .btn { width: 100%; }
+  }
+  /* ============ Большие экраны: шире колонка, крупнее шрифты, значки и фото ============
+     Без этого на мониторах 1920 и 2560 px сайт занимал узкую полосу 1240 px с пустыми полями по бокам */
+  @media (min-width: 1680px) {
+    :root {
+      --wrap: 1520px;
+      --t-h2: clamp(96px, 5.8vw, 124px);
+      --t-h3: clamp(42px, 2.5vw, 52px);
+      --t-statement: clamp(44px, 2.6vw, 56px);
+      --t-lead: clamp(20px, 1.15vw, 24px);
+      --t-body: 18px; --t-small: 15.5px; --t-micro: 13.5px;
+      --h-btn: 56px; --h-btn-s: 46px; --h-field: 54px;
+      --r-cushion-s: 56px;
+    }
+    .btn { font-size: 16.5px; padding: 0 30px; }
+    .top .wrap { height: 76px; }
+    .logo { font-size: 25px; }
+    nav.links { font-size: 15.5px; gap: 36px; }
+    .accent-line { font-size: clamp(30px, min(2.2vw, 4.4vh), 48px); }
+    .facts b { font-size: 18px; }
+    .facts svg { width: 30px; height: 30px; }
+    .ring { width: 184px; height: 184px; }
+    .ring b { font-size: 42px; }
+    .ring text { font-size: 12.5px; }
+    .note { font-size: 17px; }
+    .collage { grid-auto-rows: 80px; }
+    .dname { font-size: 18px; }
+    .dtop em { font-size: 16px; }
+    .dtype { font-size: 12.5px; }
+    .stop .ico { width: 72px; height: 72px; }
+    .stop .ico svg { width: 30px; height: 30px; }
+    .route-dot { r: 13px; }
+    .stop-text h3 { font-size: 40px; }
+    .stop-text p { font-size: 18px; }
+    .quote-wrap { max-width: 1100px; grid-template-columns: 150px 1fr; }
+    .qmark { font-size: 190px; }
+    .quote { font-size: clamp(26px, 1.6vw, 34px); }
+    .chip { font-size: 15.5px; padding: 10px 16px; }
+    .band h2 { font-size: clamp(56px, 3.6vw, 80px); }
+    .mapbox { height: 760px; }
+    .map-bar small { font-size: 13px; }
+    .wordmark { font-size: clamp(200px, 13vw, 300px); }
+    .story-sub { width: 460px; }
+  }
+  @media (min-width: 2200px) {
+    :root {
+      --wrap: 2000px;
+      --section: 150px;
+      --t-display: clamp(300px, min(17vw, 32vh), 480px);
+      --t-h2: clamp(124px, 5.6vw, 164px);
+      --t-h3: clamp(52px, 2.4vw, 64px);
+      --t-statement: clamp(56px, 2.6vw, 70px);
+      --t-lead: clamp(24px, 1.1vw, 30px);
+      --t-body: 21px; --t-small: 18.5px; --t-micro: 16px;
+      --h-btn: 66px; --h-btn-s: 54px; --h-field: 62px;
+      --r-cushion-s: 72px;
+      --s9: 128px; --s8: 84px; --s7: 64px;
+    }
+    .btn { font-size: 19.5px; padding: 0 38px; }
+    .btn .arr { width: 20px; height: 20px; }
+    .demo-ribbon { font-size: 15px; }
+    .top .wrap { height: 90px; }
+    .logo { font-size: 31px; }
+    .logo svg { width: 34px; height: 34px; }
+    nav.links { font-size: 18.5px; gap: 46px; }
+    .lang button { font-size: 15px; }
+    .cart-btn { width: 56px; height: 56px; }
+    .cart-btn svg { width: 25px; height: 25px; }
+    .accent-line { font-size: clamp(36px, min(2.2vw, 4.4vh), 60px); }
+    .facts b { font-size: 21px; }
+    .facts svg { width: 36px; height: 36px; }
+    .ring { width: 232px; height: 232px; }
+    .ring b { font-size: 54px; }
+    .ring text { font-size: 15px; }
+    .note { font-size: 21px; }
+    .note svg { width: 54px; height: 38px; }
+    .collage { grid-auto-rows: 104px; }
+    .dname { font-size: 22px; }
+    .dtop em { font-size: 19px; }
+    .dtype { font-size: 15px; }
+    .dadd svg { width: 20px; height: 20px; }
+    .stop .ico { width: 90px; height: 90px; }
+    .stop .ico svg { width: 38px; height: 38px; }
+    .route-dot { r: 16px; }
+    .stop-text h3 { font-size: 52px; }
+    .stop-text p { font-size: 21px; }
+    .route-base { stroke-width: 2.2; }
+    .route-done { stroke-width: 3.2; }
+    .quote-wrap { max-width: 1480px; grid-template-columns: 200px 1fr; }
+    .qmark { font-size: 250px; }
+    .quote { font-size: clamp(34px, 1.6vw, 44px); }
+    .chip { font-size: 18.5px; padding: 12px 20px; }
+    .band { padding: 96px; }
+    .band h2 { font-size: clamp(80px, 3.6vw, 104px); }
+    .mapbox { height: 980px; }
+    .map-bar small { font-size: 15.5px; }
+    .map-bar span, .map-bar a { font-size: 19px; }
+    .map-bar .cell { padding: 6px 30px; }
+    .map-pin { width: 60px; height: 60px; margin: -30px 0 0 -30px; font-size: 26px; }
+    .map-pop { width: 400px; left: calc(50% + 54px); }
+    .pop-img { height: 210px; }
+    .pop-body h3 { font-size: 32px; }
+    .pop-row { font-size: 16.5px; }
+    .pop-foot b { font-size: 19px; }
+    .wordmark { font-size: clamp(300px, 14vw, 400px); }
+    .fcols { font-size: 18.5px; }
+    .story-sub { width: 600px; }
+    .tags span { padding: 9px 18px; }
+    .palette button { width: 34px; height: 34px; }
+    .cbook { max-width: 780px; height: min(1060px, calc(100% - 24px)); }
+    .bm-model h3 { font-size: 54px; }
+    .bm-model > p, .bm-feat li { font-size: 19px; }
+    .bm-tabs button { font-size: 16px; padding: 9px 16px; }
+    dialog.cart { width: min(580px, 100%); }
+    .cart-head h3 { font-size: 44px; }
+    .cart-item { grid-template-columns: 92px 1fr auto; }
+    .cart-item img { width: 92px; height: 92px; }
+    .cart-item b { font-size: 18.5px; }
+    .cart-item small, .cart-item em { font-size: 16px; }
+    .cart-row { font-size: 17px; }
+    .cart-row.total b { font-size: 36px; }
+  }
+</style>
+<script>
+  document.documentElement.classList.add("js");
+  try { const p = localStorage.getItem("elka-palette"); if (p) document.documentElement.dataset.palette = p; } catch (e) {}
+</script>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="demo-ribbon" data-i18n="ribbon">Ցուցադրական տարբերակ՝ ELKA-ի սեփականատիրոջ համար։ Սա պաշտոնական կայք չէ։</div>
+
+<header class="top" id="header">
+  <div class="wrap">
+    <a class="logo" href="#top">
+      <!-- значок: кресло, как в монограмме EK на логотипе -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11.2V8a3.5 3.5 0 0 1 3.5-3.5h5A3.5 3.5 0 0 1 18 8v3.2"/><path d="M6 15h12M4.5 11A1.5 1.5 0 0 1 6 12.5V15M18 15v-2.5a1.5 1.5 0 1 1 3 0V17a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4.5A1.5 1.5 0 0 1 4.5 11"/><path d="M5.5 18v2M18.5 18v2"/></svg>
+      <span>ELKA</span>
+    </a>
+    <nav class="links" aria-label="Menu">
+      <a class="ulink" href="#catalog" data-i18n="navCatalog">Կատալոգ</a>
+      <a class="ulink" href="#kitchens" data-i18n="navKitchens">Խոհանոցներ</a>
+      <a class="ulink" href="#visit" data-i18n="navContact">Կոնտակտներ</a>
+      <a class="ulink" href="#about" data-i18n="navAbout">Մեր մասին</a>
+    </nav>
+    <div class="top-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="hy" aria-pressed="true">ՀԱՅ</button>
+        <button type="button" data-lang="ru" aria-pressed="false">РУС</button>
+        <button type="button" data-lang="en" aria-pressed="false">ENG</button>
+      </div>
+      <button class="cart-btn" type="button" data-open-cart data-i18n-aria="navCart" aria-label="Զամբյուղ">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></svg>
+        <span class="cart-badge" data-cart-count>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <!-- на ПК горизонтальные фото, на телефоне вертикальные. Фото — образцы с Unsplash -->
+    <div class="slides" id="slides">
+      <picture><source media="(max-width: 720px)" srcset="https://images.unsplash.com/photo-1634822929277-0c51ca0e8846?w=1000&h=1700&q=75&auto=format&fit=crop"><img class="on first" src="https://images.unsplash.com/photo-1699036024578-956f94df95f5?w=2200&q=75&auto=format&fit=crop" alt="" fetchpriority="high"></picture>
+      <picture><source media="(max-width: 720px)" srcset="https://images.unsplash.com/photo-1781572725438-ac8c41476752?w=1000&h=1700&q=75&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1653974123568-b5eff6d851e1?w=2200&q=75&auto=format&fit=crop" alt="" loading="lazy"></picture>
+      <picture><source media="(max-width: 720px)" srcset="https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=1000&h=1700&q=75&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=2200&q=75&auto=format&fit=crop" alt="" loading="lazy"></picture>
+    </div>
+    <div class="hero-in">
+      <div class="accent-line" data-i18n="heroAccent">կահույքի սրահ Աբովյանում</div>
+      <h1><span>ELKA</span></h1>
+      <p class="hero-text" data-i18n="heroText">Բազմոցներ, ննջասենյակներ, ճաշասենյակներ և պատվերով խոհանոցներ՝ մեր սեփական արտադրությունից։ Չափագրումը, առաքումը և տեղադրումը՝ անվճար։</p>
+      <div class="pills">
+        <a class="btn btn-light" href="#models"><span data-i18n="pShop">Ընտրել կահույք</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+        <button class="btn btn-ghost" type="button" data-open-book data-page="0" data-i18n="pCatalog">Կատալոգ</button>
+        <a class="btn btn-ghost" href="#kitchens" data-i18n="pKitchens">Պատվերով խոհանոցներ</a>
+        <a class="btn btn-ghost" href="#visit" data-i18n="pRoute">Ինչպես հասնել</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="story" id="story">
+    <div class="story-sticky">
+      <figure class="scat sc1"><img src="https://images.unsplash.com/photo-1709316054551-355656bd4815?w=600&q=70&auto=format&fit=crop" alt="" loading="lazy"></figure>
+      <figure class="scat sc2 is-circle"><img src="https://images.unsplash.com/photo-1741970713181-667de4c4b938?w=600&q=70&auto=format&fit=crop" alt="" loading="lazy"></figure>
+      <figure class="scat sc3"><img src="https://images.unsplash.com/photo-1652707976011-cbc549eb7ad5?w=600&q=70&auto=format&fit=crop" alt="" loading="lazy"></figure>
+      <figure class="scat sc4"><img src="https://images.unsplash.com/photo-1602872030490-4a484a7b3ba6?w=600&q=70&auto=format&fit=crop" alt="" loading="lazy"></figure>
+      <figure class="scat sc5"><img src="https://images.unsplash.com/photo-1632583824020-937ae9564495?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy"></figure>
+      <figure class="scat sc6 is-cushion"><img src="https://images.unsplash.com/photo-1757969704802-4d0050f038d7?w=600&q=70&auto=format&fit=crop" alt="" loading="lazy"></figure>
+      <figure class="scat sc7"><img src="https://images.unsplash.com/photo-1683115100747-ee545c0fbdfd?w=600&q=70&auto=format&fit=crop" alt="" loading="lazy"></figure>
+      <figure class="scat sc8 is-back"><img src="https://images.unsplash.com/photo-1750420556288-d0e32a6f517b?w=600&q=70&auto=format&fit=crop" alt="" loading="lazy"></figure>
+      <div class="story-center"><img src="https://images.unsplash.com/photo-1699239116624-85268dce7377?w=2200&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+      <div class="story-shade"></div>
+      <div class="story-free" data-i18n="wFree">անվճար</div>
+      <div class="story-words" aria-hidden="true">
+        <div class="track"><span data-i18n="w1">Կչափենք</span><span data-i18n="w2">Կբերենք</span><span data-i18n="w3">Կհավաքենք</span></div>
+      </div>
+      <div class="story-sub">
+        <p data-i18n="ws1">Վարպետը կգա, կչափի սենյակը և կասի, թե որ մոդելը կտեղավորվի։</p>
+        <p data-i18n="ws2">Բազմոցը, ննջասենյակը կամ խոհանոցը կհասցնենք մինչև ձեր դուռը։</p>
+        <p data-i18n="ws3">Կհավաքենք և կտեղադրենք տեղում, իսկ ձեզ կմնա միայն նստել։</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="cover">
+    <div class="wrap about">
+      <div>
+        <h2 class="reveal" data-i18n="aboutTitle">Մեր մասին</h2>
+        <p class="statement reveal">
+          <span data-i18n="st1">Կահույք</span> <span class="it" data-i18n="st2">մեր արտադրությունից,</span><br>
+          <span data-i18n="st3">խոհանոցներ</span> <span class="it" data-i18n="st4">ձեր չափերով</span>
+        </p>
+        <p class="lead reveal" data-i18n="aboutLead">ELKA-ն կահույքի սրահ է Երևանյան փողոցում՝ Աբովյանի կայարանի մոտ։ Սրահում՝ անկյունային բազմոցներ, ննջասենյակի հավաքածուներ, ճաշասեղաններ և բազկաթոռներ։ Խոհանոցները պատրաստում ենք պատվերով՝ մեր արտադրամասում, CNC հաստոցով, ձեր սենյակի չափերով։</p>
+        <div class="facts stagger">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>
+            <b data-i18n="f1t">Սեփական արտադրություն</b><span data-i18n="f1">Կահույքագործներ, փայտի վարպետներ և CNC ձևաբացում՝ առանց միջնորդների։</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="8" width="19" height="8" rx="1.5"/><path d="M6.5 8v3M10.5 8v4.5M14.5 8v3M18.5 8v4.5"/></svg>
+            <b data-i18n="f2t">Անվճար չափագրում</b><span data-i18n="f2">Կգանք, կչափենք սենյակը և կառաջարկենք համապատասխան մոդել։</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9.5h-11zM13.5 9.5h4l3.5 3.5V16h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+            <b data-i18n="f3t">Առաքում և տեղադրում</b><span data-i18n="f3">Անվճար՝ կբերենք և կհավաքենք ինքներս։</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15.5l2 2 4-4"/></svg>
+            <b data-i18n="f4t">Ապառիկ՝ նույն գնով</b><span data-i18n="f4">Ապառիկով արժեքը նույնն է, ինչ միանգամից վճարելիս։</span>
+          </div>
+        </div>
+      </div>
+      <div class="art reveal">
+        <div class="cushion"><img src="https://images.unsplash.com/photo-1649455767691-49c834dd3f6b?w=1100&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+        <div class="circle"><img src="https://images.unsplash.com/photo-1683115100702-af818681184d?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy"></div>
+        <div class="ring" aria-label="4,4">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ringPath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><text><textPath href="#ringPath" data-i18n="ringText">ELKA կահույք · Աբովյան · Երևանյան 1/34 · </textPath></text></svg>
+          <b><span data-count="4.4" data-dec="1">4,4</span><small>★</small></b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" class="alt curve-top">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="reveal" data-i18n="catTitle">Կատալոգ</h2>
+        <p class="lead reveal" data-i18n="catLead">Փափուկ կահույք, ննջասենյակներ, ճաշասենյակներ և խոհանոցներ՝ ամեն ինչ կարող եք տեսնել և շոշափել Երևանյան փողոցի սրահում։</p>
+      </div>
+      <div class="row">
+        <div class="media cushion reveal"><img src="https://images.unsplash.com/photo-1723257135140-8b74197650b2?w=1100&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+        <div class="reveal">
+          <div class="cap" data-i18n="r1c">անկյունային և բացվող</div>
+          <h3 data-i18n="r1t">Փափուկ կահույք</h3>
+          <p data-i18n="r1">«Գաբաննա» և «Գլամուր» անկյունային բազմոցներ, բացվող «Բռաբուս»՝ պահարանով, և «Փրինսթոն» հավաքածուն։ Եկեք և նստեք դրանց վրա սրահում։</p>
+          <div class="tags"><span data-i18n="t1a">«Գաբաննա»</span><span data-i18n="t1b">«Գլամուր»</span><span data-i18n="t1c">«Բռաբուս»</span><span data-i18n="t1d">«Փրինսթոն»</span></div>
+          <div class="row-act"><button class="btn btn-line btn-s" type="button" data-open-book data-page="1"><span data-i18n="rowBtn">Դիտել մոդելները</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button></div>
+        </div>
+      </div>
+      <div class="row rev">
+        <div class="media cushion reveal"><img src="https://images.unsplash.com/photo-1750420556288-d0e32a6f517b?w=1100&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+        <div class="reveal">
+          <div class="cap" data-i18n="r2c">6 կտոր</div>
+          <h3 data-i18n="r2t">Ննջասենյակներ</h3>
+          <p data-i18n="r2">«Յասմին» և «Ազիլիա» հավաքածուներ՝ 6 կտորից։ Հիմա յուրաքանչյուրին՝ ներքնակ նվեր։</p>
+          <div class="tags"><span data-i18n="t2a">«Յասմին»</span><span data-i18n="t2b">«Ազիլիա»</span><span data-i18n="t2c">ներքնակ նվեր</span></div>
+          <div class="row-act"><button class="btn btn-line btn-s" type="button" data-open-book data-page="5"><span data-i18n="rowBtn">Դիտել մոդելները</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="media cushion reveal"><img src="https://images.unsplash.com/photo-1780659760416-3b62b5f18e11?w=1100&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+        <div class="reveal">
+          <div class="cap" data-i18n="r3c">սեղան + 6 աթոռ</div>
+          <h3 data-i18n="r3t">Ճաշասենյակներ</h3>
+          <p data-i18n="r3">Ճաշասեղան՝ վեց փափուկ աթոռով, 489 000 ֏ ամբողջ հավաքածուի համար։ Տեղ կա մեծ ընտանիքի և տոնական հյուրերի համար։</p>
+          <div class="tags"><span data-i18n="t3a">489 000 ֏</span><span data-i18n="t3b">փափուկ աթոռներ</span><span data-i18n="t3c">մեծ ընտանիքի համար</span></div>
+          <div class="row-act"><button class="btn btn-line btn-s" type="button" data-open-book data-page="7"><span data-i18n="rowBtn">Դիտել մոդելները</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button></div>
+        </div>
+      </div>
+      <div class="row rev">
+        <div class="media cushion reveal"><img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=1100&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+        <div class="reveal">
+          <div class="cap" data-i18n="r4c">ձեր չափերով</div>
+          <h3 data-i18n="r4t">Պատվերով խոհանոցներ</h3>
+          <p data-i18n="r4">Նախագծում ենք ձեր սենյակի, ոճի և բյուջեի համար, պատրաստում մեր արտադրամասում և տեղադրում ինքներս։</p>
+          <div class="tags"><span data-i18n="t4a">նախագիծ</span><span data-i18n="t4b">սեփական արտադրամաս</span><span data-i18n="t4c">տեղադրում</span></div>
+          <div class="row-act"><a class="btn btn-line btn-s" href="#kitchens"><span data-i18n="kitLink">Ինչպես ենք աշխատում</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></div>
+        </div>
+      </div>
+
+      <div class="collage reveal" aria-label="Collage">
+        <figure class="c1">
+          <img src="https://images.unsplash.com/photo-1769736436858-65a86b395ef7?w=900&q=70&auto=format&fit=crop" alt="" loading="lazy">
+          <figcaption class="note n-top"><span data-i18n="n1">բուկլե և փայտ</span><svg viewBox="0 0 46 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 6c14-4 30 2 36 22"/><path d="M33 22l6 7 4-9"/></svg></figcaption>
+        </figure>
+        <figure class="c2">
+          <img src="https://images.unsplash.com/photo-1655149555299-9f3052e48e7e?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy">
+          <figcaption class="note n-top-r"><span data-i18n="n2">թավիշ՝ կապիտոնե կարով</span><svg viewBox="0 0 46 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 6c14-4 30 2 36 22"/><path d="M33 22l6 7 4-9"/></svg></figcaption>
+        </figure>
+        <figure class="c3">
+          <img src="https://images.unsplash.com/photo-1759722667490-e5fd31b8dbd5?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy">
+          <figcaption class="note n-top"><span data-i18n="n3">բազկաթոռ՝ պլեդով</span><svg viewBox="0 0 46 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 6c14-4 30 2 36 22"/><path d="M33 22l6 7 4-9"/></svg></figcaption>
+        </figure>
+        <figure class="c4">
+          <img src="https://images.unsplash.com/photo-1709316054551-355656bd4815?w=500&q=70&auto=format&fit=crop" alt="" loading="lazy">
+        </figure>
+        <figure class="c5">
+          <img src="https://images.unsplash.com/photo-1757344454333-cc666252e596?w=900&q=70&auto=format&fit=crop" alt="" loading="lazy">
+          <figcaption class="note n-bot"><svg viewBox="0 0 46 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 6c14-4 30 2 36 22"/><path d="M33 22l6 7 4-9"/></svg><span data-i18n="n5">ննջասենյակ՝ տաք փայտով</span></figcaption>
+        </figure>
+        <figure class="c6">
+          <img src="https://images.unsplash.com/photo-1602872030490-4a484a7b3ba6?w=800&q=70&auto=format&fit=crop" alt="" loading="lazy">
+          <figcaption class="note n-bot"><svg viewBox="0 0 46 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 6c14-4 30 2 36 22"/><path d="M33 22l6 7 4-9"/></svg><span data-i18n="n6">սեղան մեծ ընտանիքի համար</span></figcaption>
+        </figure>
+      </div>
+      <p class="sample-note" data-i18n="catNote">Լուսանկարները՝ Unsplash-ի օրինակներ։ Աշխատող տարբերակում՝ ELKA սրահի լուսանկարներ։</p>
+    </div>
+  </section>
+
+  <section id="models">
+    <div class="wrap">
+      <div class="sub-h reveal">
+        <h2 data-i18n="modelsTitle">Մոդելներ սրահից</h2>
+        <span class="micro" data-i18n="modelsHint">Անունները և գինը՝ ELKA-ի Facebook գրառումներից</span>
+      </div>
+      <div class="dgrid stagger" id="mgrid"></div>
+      <div class="menu-foot reveal">
+        <p data-i18n="modelsNote">Գներն ու առկայությունը ճշտեք զանգով։ Մոդելները և հավաքածուի գինը՝ ELKA-ի Facebook էջից, հոկտեմբեր–նոյեմբեր 2026։ Լուսանկարները՝ օրինակներ։</p>
+        <button class="btn btn-primary" type="button" data-open-book data-page="0"><span data-i18n="allBtn">Կատալոգ-գիրքը</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="kitchens" class="alt curve-top">
+    <div class="wrap">
+      <div class="kit">
+        <div>
+          <h2 class="reveal" data-i18n="kitTitle">Պատվերով խոհանոցներ</h2>
+          <p class="statement reveal"><span data-i18n="ks1">Խոհանոց,</span> <span class="it" data-i18n="ks2">ինչպես պատկերացնում եք</span></p>
+          <p class="lead reveal" data-i18n="kitLead">Խոհանոցը չենք ընտրում կատալոգից. այն նախագծում ենք ձեր սենյակի համար՝ հաշվի առնելով չափերը, ձեր սովորությունները և ինտերիերի ոճը։</p>
+          <!-- кухню нельзя купить сразу: добавляем «расчёт кухни» в корзину и открываем её -->
+          <button class="btn btn-primary reveal" type="button" data-add="7" data-then-open data-label="kitCta"><span data-i18n="kitCta">Պատվիրել խոհանոցի հաշվարկ</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button>
+        </div>
+        <div class="kit-art reveal">
+          <div class="cushion"><img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?w=1200&q=75&auto=format&fit=crop" alt="" loading="lazy"></div>
+          <div class="circle"><img src="https://images.unsplash.com/photo-1590880795696-20c7dfadacde?w=600&q=70&auto=format&fit=crop" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <!-- Маршрут заказа кухни: пунктир змейкой слева направо и обратно, этапы на поворотах, круг едет по линии вместе с прокруткой.
+           Форму линии и места этапов считает скрипт (layoutRoute) по ширине блока и высоте текстов. -->
+      <div class="route" id="route">
+        <svg class="route-svg" aria-hidden="true" focusable="false">
+          <path class="route-base"/>
+          <path class="route-done"/>
+          <circle class="route-dot" r="11"/>
+        </svg>
+        <div class="stop">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="8" width="19" height="8" rx="1.5"/><path d="M6.5 8v3M10.5 8v4.5M14.5 8v3M18.5 8v4.5"/></svg></span>
+          <div class="stop-text"><h3 data-i18n="k1t">Չափագրում</h3><p data-i18n="k1">Կգանք և կչափենք պատերը, պատուհանները, խողովակներն ու վարդակները։ Անվճար։</p></div>
+        </div>
+        <div class="stop">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1z"/><path d="M14 7l3 3"/></svg></span>
+          <div class="stop-text"><h3 data-i18n="k2t">Նախագիծ</h3><p data-i18n="k2">Միասին կընտրենք ճակատները, սեղանի երեսը և ֆուրնիտուրան, ցույց կտանք նախագիծն ու գինը։</p></div>
+        </div>
+        <div class="stop">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span>
+          <div class="stop-text"><h3 data-i18n="k3t">Արտադրություն</h3><p data-i18n="k3">Իրանները կձևաբացենք և կհավաքենք մեր արտադրամասում՝ CNC հաստոցով։</p></div>
+        </div>
+        <div class="stop">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9.5h-11zM13.5 9.5h4l3.5 3.5V16h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
+          <div class="stop-text"><h3 data-i18n="k4t">Տեղադրում</h3><p data-i18n="k4">Կբերենք և կտեղադրենք անվճար։</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="band reveal">
+        <div>
+          <h2 data-i18n="ctaTitle">Առաքում և տեղադրում՝ անվճար</h2>
+          <p data-i18n="ctaText">Պատվիրեք կայքում՝ կբերենք և կհավաքենք ինքներս։ Ապառիկով գինը նույնն է։</p>
+        </div>
+        <a class="btn" href="#models"><span data-i18n="ctaBtn">Ընտրել մոդել</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt curve-top" aria-labelledby="rev-h">
+    <div class="wrap center">
+      <h2 id="rev-h" class="reveal" data-i18n="revTitle">Ինչու են մեզ ընտրում</h2>
+      <div class="quote-wrap reveal">
+        <div class="qmark" aria-hidden="true">“</div>
+        <div>
+          <p class="quote" data-i18n="quote">Մեզ դիմում են, երբ ուզում են, որ ամեն ինչ իր տեղը գտնի՝ ճիշտ այնպես, ինչպես ծրագրել եք. բազմոց, որը ճիշտ կտեղավորվի պատի մոտ, խոհանոց՝ սանտիմետր առ սանտիմետր, և ննջասենյակ՝ մեկ հավաքածուով։</p>
+          <div class="chips-row">
+            <span class="chip"><b data-count="4.4" data-dec="1">4,4</b> ★ <span>Yandex</span></span>
+            <span class="chip"><b data-count="7">7</b> <span data-i18n="chipRatings">գնահատական</span></span>
+            <span class="chip"><b data-count="5" data-dec="1">5,0</b> ★ <span>Google</span></span>
+            <span class="chip"><b data-count="4.6" data-dec="1">4,6</b> <span data-i18n="chipFollowers">հազ. հետևորդ Facebook-ում</span></span>
+            <a class="ulink" style="margin-left:6px;font-size:14px;color:var(--accent-2)" href="https://yandex.com/maps/org/kahuyk_elka_elka_furniture/131546316277/reviews/" target="_blank" rel="noopener" data-i18n="revBtn">Կարդալ կարծիքները →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="reveal" data-i18n="visitTitle">Ինչպես գտնել մեզ</h2>
+      </div>
+      <div class="mapbox reveal">
+        <a class="map-canvas" href="https://yandex.com/maps/org/kahuyk_elka_elka_furniture/131546316277/" target="_blank" rel="noopener" data-i18n-aria="openY" aria-label="Բացել Yandex Քարտեզներում">
+          <!-- карта строго с центром на адресе: долгота ± 0.011, широта ± 0.0055 -->
+          <iframe title="Map" loading="lazy" tabindex="-1"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=44.606357%2C40.263708%2C44.628357%2C40.274708&amp;layer=mapnik"></iframe>
+          <div class="map-pin" aria-hidden="true">E</div>
+        </a>
+        <div class="map-bar">
+          <div class="cell"><small data-i18n="addrLabel">Հասցե</small><span data-i18n="addr">Աբովյան, Երևանյան 1/34</span></div>
+          <div class="cell"><small data-i18n="hoursLabel">Ժամեր</small><span data-i18n="hours">Ճշտեք զանգով</span></div>
+          <div class="cell"><small data-i18n="phoneLabel">Հեռախոս</small><a class="ulink" href="tel:+37498911100">+374 98 911 100</a></div>
+        </div>
+        <div class="map-pop">
+          <div class="pop-img">
+            <img src="https://images.unsplash.com/photo-1574286963575-f30d9216ce74?w=700&q=70&auto=format&fit=crop" alt="" loading="lazy">
+            <span class="badge" data-i18n="popBadge">Կահույքի սրահ</span>
+          </div>
+          <div class="pop-body">
+            <h3>ELKA</h3>
+            <div class="pop-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="addr">Աբովյան, Երևանյան 1/34</span></div>
+            <div class="pop-foot">
+              <b>4,4 ★<small data-i18n="chip2">7 գնահատական</small></b>
+              <a class="btn btn-primary btn-s" href="https://yandex.com/maps/?rtext=~40.269208%2C44.617357" target="_blank" rel="noopener"><span data-i18n="routeBtn">Երթուղի</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-links">
+        <a class="ulink" href="https://yandex.com/maps/org/kahuyk_elka_elka_furniture/131546316277/" target="_blank" rel="noopener" data-i18n="openY">Բացել Yandex Քարտեզներում</a>
+        <a class="ulink" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.269208,44.617357" target="_blank" rel="noopener" data-i18n="routeG">Երթուղի Google-ով</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer">
+  <div class="wrap">
+    <div class="fcols">
+      <div><b data-i18n="fcSections">Բաժիններ</b><a class="ulink" href="#catalog" data-i18n="navCatalog">Կատալոգ</a><a class="ulink" href="#kitchens" data-i18n="navKitchens">Խոհանոցներ</a><a class="ulink" href="#models" data-open-cart data-i18n="navCart">Զամբյուղ</a><a class="ulink" href="#about" data-i18n="navAbout">Մեր մասին</a></div>
+      <div><b data-i18n="fcContacts">Կոնտակտներ</b><a class="ulink" href="tel:+37498911100">+374 98 911 100</a><span data-i18n="addr">Աբովյան, Երևանյան 1/34</span><a class="ulink" href="mailto:elkakahuyq2020@mail.ru">elkakahuyq2020@mail.ru</a><a class="ulink" href="https://www.facebook.com/Elkafurniture" target="_blank" rel="noopener">Facebook</a></div>
+      <div><b data-i18n="fcDocs">Փաստաթղթեր</b><button type="button" class="open-policy ulink" data-i18n="policyTitle">Գաղտնիության քաղաքականություն</button></div>
+      <div><b data-i18n="fcDemo">Ցուցադրական տարբերակ</b><span data-i18n="fcDemoText">Լուսանկարները՝ Unsplash-ի օրինակներ։ Մոդելները, գինը և պայմանները՝ ELKA-ի Facebook էջից, նոյեմբեր 2026։</span></div>
+    </div>
+    <div class="wordmark">ELKA</div>
+    <div class="fbottom"><span data-i18n="footer">© 2026 ELKA կահույքի սրահ, Աբովյան</span><span data-i18n="footerDemo">Կայքի ցուցադրական տարբերակ</span></div>
+  </div>
+</footer>
+
+<div class="palette" role="group" aria-label="Palette">
+  <span data-i18n="paletteLbl">Գույնը</span>
+  <button type="button" data-p="linen" aria-pressed="true" data-i18n-title="palLinen" title="Վուշ և ընկուզենի"></button>
+  <button type="button" data-p="boucle" aria-pressed="false" data-i18n-title="palBoucle" title="Բուկլե"></button>
+  <button type="button" data-p="velvet" aria-pressed="false" data-i18n-title="palVelvet" title="Գրաֆիտե թավիշ"></button>
+  <button type="button" data-p="walnut" aria-pressed="false" data-i18n-title="palWalnut" title="Մուգ ընկուզենի"></button>
+</div>
+
+<nav class="dock" aria-label="Quick actions">
+  <a class="primary" href="tel:+37498911100">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span data-i18n="dockCall">Զանգ</span>
+  </a>
+  <a href="#models" data-open-cart>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></svg>
+    <span class="cart-badge" data-cart-count>0</span>
+    <span data-i18n="dockCart">Զամբյուղ</span>
+  </a>
+  <a href="#visit">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+    <span data-i18n="dockRoute">Երթուղի</span>
+  </a>
+</nav>
+
+<dialog class="cbook" id="cbook" aria-label="Catalogue">
+  <div class="bm">
+    <div class="bm-head">
+      <span class="bm-tag" data-i18n="bmTag">Գինը՝ զանգով</span>
+      <button class="bm-close" type="button" id="bmClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="bm-tabs" id="bmTabs" role="tablist"></div>
+    <div class="bm-pages" id="bmPages"></div>
+    <div class="bm-nav">
+      <button type="button" id="bmPrev" aria-label="Previous"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="bm-dots" id="bmDots"></div>
+      <button type="button" id="bmNext" aria-label="Next"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Корзина (демо): лежит в браузере посетителя, заказ никуда не уходит, оплаты нет -->
+<dialog class="cart" id="cart" data-step="list" aria-labelledby="cartH">
+  <div class="cart-in">
+    <div class="cart-head">
+      <h3 id="cartH" data-i18n="cartTitle">Զամբյուղ</h3>
+      <button class="bm-close" type="button" id="cartClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-body">
+      <div class="cart-list" id="cartList"></div>
+      <form id="checkout" novalidate>
+        <button type="button" class="cart-back" id="cartBack" data-i18n="cartBack">← Վերադառնալ զամբյուղ</button>
+        <input class="box full" id="fName" autocomplete="name" data-i18n-ph="phName" data-i18n-aria="fName" placeholder="Ձեր անունը">
+        <span class="err" id="eName"></span>
+        <input class="box full" id="fPhone" type="tel" inputmode="tel" autocomplete="tel" data-i18n-ph="phPhone" data-i18n-aria="fPhone" placeholder="Հեռախոսահամար">
+        <span class="err" id="ePhone"></span>
+        <input class="box full" id="fAddr" autocomplete="street-address" data-i18n-ph="phAddr" data-i18n-aria="fAddr" placeholder="Առաքման հասցե">
+        <span class="err" id="eAddr"></span>
+        <span class="flabel" data-i18n="fDate">Առաքման ցանկալի օրը</span>
+        <input class="box" id="fDate" type="date" data-i18n-aria="fDate">
+        <select class="box" id="fPay" data-i18n-aria="payLbl">
+          <option value="" disabled selected data-i18n="payLbl">Վճարում</option>
+          <option data-i18n="pay1">Առաքման ժամանակ</option>
+          <option data-i18n="pay2">Ապառիկով</option>
+          <option data-i18n="pay3">Քարտով առցանց</option>
+        </select>
+        <textarea class="box full" id="fNote" rows="2" data-i18n-ph="phNote" placeholder="Մեկնաբանություն՝ գույն, հարկ, վերելակ (պարտադիր չէ)"></textarea>
+        <label class="consent">
+          <input type="checkbox" id="fConsent">
+          <span><span data-i18n="consent">Համաձայն եմ անձնական տվյալների մշակմանը՝ համաձայն</span> <button type="button" class="open-policy" data-i18n="policyLink">գաղտնիության քաղաքականության</button></span>
+        </label>
+        <span class="err" id="eConsent"></span>
+        <span class="err" id="eCart"></span>
+        <button class="submit" type="submit" data-i18n="send">Հաստատել պատվերը</button>
+      </form>
+      <div class="cart-done" role="status">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
+        <h3 data-i18n="doneTitle">Պատվերը ձևակերպված է</h3>
+        <p data-i18n="doneText">Ցուցադրական տարբերակ. աշխատող կայքում պատվերը անմիջապես կհասնի սրահին Telegram-ով կամ WhatsApp-ով, իսկ քարտով վճարումը կմիացնենք բանկի միջոցով։</p>
+        <button class="btn btn-primary" type="button" data-close-cart data-i18n="close">Փակել</button>
+      </div>
+    </div>
+    <div class="cart-foot">
+      <div class="cart-row"><span data-i18n="cartDelivery">Առաքում և տեղադրում</span><span data-i18n="cartFree">անվճար</span></div>
+      <div class="cart-row total"><span data-i18n="cartTotal">Ընդամենը</span><b id="cartTotal">0 ֏</b></div>
+      <p class="micro" data-i18n="cartNote">«… ֏» գինը և վերջնական գումարը կհաստատենք զանգով։</p>
+      <button class="submit" type="button" id="toCheckout" data-i18n="cartCheckout">Ձևակերպել պատվերը</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="policy" id="policy">
+  <h3 data-i18n="policyTitle">Գաղտնիության քաղաքականություն</h3>
+  <p data-i18n="policyText">Ցուցադրական տարբերակում փաստաթուղթը դեռ պատրաստված չէ։ Աշխատող կայքում այստեղ կլինի ամբողջական տեքստը՝ ՀՀ «Անձնական տվյալների պաշտպանության մասին» օրենքին համապատասխան։</p>
+  <form method="dialog" style="all:unset"><button class="btn btn-primary" data-i18n="close">Փակել</button></form>
+</dialog>
+
+<script>
+  /* Модели: названия, состав и цена комплекта — из роликов ELKA в Facebook (октябрь–ноябрь 2026).
+     price — число в драмах, если салон сам его опубликовал; иначе «… ֏», пока салон не пришлёт цену (kitchen — «после замера»).
+     Фото — образцы с Unsplash. */
+  // в офлайн-версии (build-offline.ps1) фото лежат в IMG прямо в файле, иначе грузятся с Unsplash
+  const U = (id, w) => (typeof IMG !== "undefined" && IMG[id.slice(6)])
+    ? "data:image/webp;base64," + IMG[id.slice(6)]
+    : `https://images.unsplash.com/${id}?w=${w}&q=72&auto=format&fit=crop`;
+  const MODELS = [
+    { img: "photo-1574286963575-f30d9216ce74",
+      hy: { n: "«Գաբաննա»", t: "անկյունային բազմոց", d: "Ջերմ ու ժամանակակից տեսք հյուրասենյակին, որտեղ հավաքվում է ամբողջ ընտանիքը։", f: ["անկյունային մոդել", "կարող եք նստել և փորձել սրահում", "առաքում և տեղադրում՝ անվճար"] },
+      ru: { n: "«Габанна»", t: "угловой диван", d: "Тёплый и современный вид для гостиной, где собирается вся семья.", f: ["угловая модель", "можно посидеть и примериться в салоне", "доставка и сборка бесплатно"] },
+      en: { n: "Gabanna", t: "corner sofa", d: "A warm, modern look for the living room where the whole family gathers.", f: ["corner model", "try it out at the showroom", "free delivery and assembly"] } },
+    { img: "photo-1605365070248-299a182a2ca6",
+      hy: { n: "«Գլամուր»", t: "անկյունային բազմոց", d: "Նրբագեղ գծեր և հանգիստ շքեղություն. կդառնա հյուրասենյակի ամենագեղեցիկ անկյունը։", f: ["անկյունային մոդել", "ժամանակակից դիզայն", "առաքում և տեղադրում՝ անվճար"] },
+      ru: { n: "«Гламур»", t: "угловой диван", d: "Мягкие линии и спокойная роскошь: станет самым красивым углом гостиной.", f: ["угловая модель", "современный дизайн", "доставка и сборка бесплатно"] },
+      en: { n: "Glamour", t: "corner sofa", d: "Soft lines and quiet luxury: it becomes the most beautiful corner of the living room.", f: ["corner model", "modern design", "free delivery and assembly"] } },
+    { img: "photo-1691819989572-d3a9c83a6f17",
+      hy: { n: "«Բռաբուս»", t: "բազմաֆունկցիոնալ բազմոց", d: "Բացվում է և դառնում հարմար քնելու տեղ, իսկ ներսում ընդարձակ պահարան կա։", f: ["բացվում է՝ դառնում մահճակալ", "պահարան սպիտակեղենի համար", "հարմար է փոքր բնակարանին"] },
+      ru: { n: "«Брабус»", t: "диван-кровать", d: "Раскладывается в удобное спальное место, а внутри есть вместительный ящик.", f: ["раскладывается в кровать", "ящик для белья", "подходит небольшой квартире"] },
+      en: { n: "Brabus", t: "sofa bed", d: "Unfolds into a comfortable bed and has a roomy storage box inside.", f: ["unfolds into a bed", "storage box for bedding", "good for a small flat"] } },
+    { img: "photo-1742647777848-d85e8029d0cb",
+      hy: { n: "«Փրինսթոն»", t: "հյուրասենյակի հավաքածու", d: "Բաց գույնի փափուկ բազմոց՝ մեղմ, կլորավուն ձևերով։ Կազմը ճշտեք զանգով։", f: ["բաց գույնի պաստառ", "մեղմ, կլորավուն ձևեր", "կազմը և գինը՝ զանգով"] },
+      ru: { n: "«Принстон»", t: "комплект для гостиной", d: "Светлый мягкий диван с плавными, округлыми формами. Состав комплекта — по телефону.", f: ["светлая обивка", "плавные округлые формы", "состав и цена — по телефону"] },
+      en: { n: "Princeton", t: "living room set", d: "A light, soft sofa with gentle rounded shapes. Ask us by phone what the set includes.", f: ["light upholstery", "gentle rounded shapes", "set contents and price by phone"] } },
+    { img: "photo-1781572725438-ac8c41476752",
+      hy: { n: "«Յասմին»", t: "ննջասենյակ, 6 կտոր", d: "Ջերմ և հանգիստ ննջասենյակ մեկ հավաքածուում։ Ներքնակը՝ նվեր։", f: ["6 կտոր", "ներքնակ՝ նվեր", "առաքում և տեղադրում՝ անվճար"] },
+      ru: { n: "«Ясмин»", t: "спальня, 6 предметов", d: "Тёплая и спокойная спальня одним комплектом. Матрас — в подарок.", f: ["6 предметов", "матрас в подарок", "доставка и сборка бесплатно"] },
+      en: { n: "Yasmin", t: "bedroom, 6 pieces", d: "A warm, calm bedroom in a single set. The mattress comes free.", f: ["6 pieces", "free mattress", "free delivery and assembly"] } },
+    { img: "photo-1757344454333-cc666252e596",
+      hy: { n: "«Ազիլիա»", t: "ննջասենյակ, 6 կտոր", d: "Էլեգանտ դիզայն և հարմարավետություն։ Ներքնակը՝ նվեր, առաքումն ու տեղադրումը՝ անվճար։", f: ["6 կտոր", "ներքնակ՝ նվեր", "ապառիկով՝ նույն գնով"] },
+      ru: { n: "«Азилия»", t: "спальня, 6 предметов", d: "Элегантный дизайн и удобство. Матрас в подарок, доставка и сборка бесплатно.", f: ["6 предметов", "матрас в подарок", "в рассрочку — по той же цене"] },
+      en: { n: "Azilia", t: "bedroom, 6 pieces", d: "Elegant design and comfort. Free mattress, free delivery and assembly.", f: ["6 pieces", "free mattress", "instalments at the same price"] } },
+    { img: "photo-1602872030490-4a484a7b3ba6", price: 489000,
+      hy: { n: "Ճաշասեղան և 6 աթոռ", t: "ճաշասենյակի հավաքածու", d: "Մեծ սեղան և վեց փափուկ աթոռ՝ ամբողջ ընտանիքի և տոնական հյուրերի համար։", f: ["սեղան + 6 փափուկ աթոռ", "489 000 ֏՝ ամբողջ հավաքածուն", "առաքում և տեղադրում՝ անվճար"] },
+      ru: { n: "Стол и 6 стульев", t: "столовая группа", d: "Большой стол и шесть мягких стульев: место для всей семьи и гостей по праздникам.", f: ["стол + 6 мягких стульев", "489 000 ֏ за весь комплект", "доставка и сборка бесплатно"] },
+      en: { n: "Table & 6 chairs", t: "dining set", d: "A large table with six upholstered chairs: room for the whole family and holiday guests.", f: ["table + 6 upholstered chairs", "489,000 ֏ for the whole set", "free delivery and assembly"] } },
+    { img: "photo-1632583824020-937ae9564495", kitchen: true,
+      hy: { n: "Խոհանոց ձեր չափերով", t: "պատվերով խոհանոց", d: "Ճակատներ, սեղանի երես և ներքին լցոնում՝ ձեր սենյակի և ոճի համար։", f: ["անվճար չափագրում", "նախագիծ՝ ձեր սենյակի համար", "պատրաստում ենք մեր արտադրամասում"] },
+      ru: { n: "Кухня по вашим размерам", t: "кухня на заказ", d: "Фасады, столешница и наполнение — под вашу комнату и стиль.", f: ["замер бесплатно", "проект под вашу комнату", "делаем в своём цехе"] },
+      en: { n: "Kitchen made to size", t: "custom kitchen", d: "Fronts, worktop and interior fittings designed for your room and style.", f: ["free measuring", "designed for your room", "made in our own workshop"] } }
+  ];
+
+  const T = {
+    hy: {
+      ribbon: "Ցուցադրական տարբերակ՝ ELKA-ի սեփականատիրոջ համար։ Սա պաշտոնական կայք չէ։",
+      title: "ELKA — կահույքի սրահ Աբովյանում",
+      navCatalog: "Կատալոգ", navKitchens: "Խոհանոցներ", navContact: "Կոնտակտներ", navAbout: "Մեր մասին", navCart: "Զամբյուղ",
+      heroAccent: "կահույքի սրահ Աբովյանում",
+      heroText: "Բազմոցներ, ննջասենյակներ, ճաշասենյակներ և պատվերով խոհանոցներ՝ մեր սեփական արտադրությունից։ Չափագրումը, առաքումը և տեղադրումը՝ անվճար։",
+      pShop: "Ընտրել կահույք", pCatalog: "Կատալոգ", pKitchens: "Պատվերով խոհանոցներ", pRoute: "Ինչպես հասնել",
+      wFree: "անվճար", w1: "Կչափենք", w2: "Կբերենք", w3: "Կհավաքենք",
+      ws1: "Վարպետը կգա, կչափի սենյակը և կասի, թե որ մոդելը կտեղավորվի։",
+      ws2: "Բազմոցը, ննջասենյակը կամ խոհանոցը կհասցնենք մինչև ձեր դուռը։",
+      ws3: "Կհավաքենք և կտեղադրենք տեղում, իսկ ձեզ կմնա միայն նստել։",
+      aboutTitle: "Մեր մասին",
+      st1: "Կահույք", st2: "մեր արտադրությունից,", st3: "խոհանոցներ", st4: "ձեր չափերով",
+      aboutLead: "ELKA-ն կահույքի սրահ է Երևանյան փողոցում՝ Աբովյանի կայարանի մոտ։ Սրահում՝ անկյունային բազմոցներ, ննջասենյակի հավաքածուներ, ճաշասեղաններ և բազկաթոռներ։ Խոհանոցները պատրաստում ենք պատվերով՝ մեր արտադրամասում, CNC հաստոցով, ձեր սենյակի չափերով։",
+      f1t: "Սեփական արտադրություն", f1: "Կահույքագործներ, փայտի վարպետներ և CNC ձևաբացում՝ առանց միջնորդների։",
+      f2t: "Անվճար չափագրում", f2: "Կգանք, կչափենք սենյակը և կառաջարկենք համապատասխան մոդել։",
+      f3t: "Առաքում և տեղադրում", f3: "Անվճար՝ կբերենք և կհավաքենք ինքներս։",
+      f4t: "Ապառիկ՝ նույն գնով", f4: "Ապառիկով արժեքը նույնն է, ինչ միանգամից վճարելիս։",
+      ringText: "ELKA կահույք · Աբովյան · Երևանյան 1/34 · ",
+      catTitle: "Կատալոգ", catLead: "Փափուկ կահույք, ննջասենյակներ, ճաշասենյակներ և խոհանոցներ՝ ամեն ինչ կարող եք տեսնել և շոշափել Երևանյան փողոցի սրահում։",
+      r1c: "անկյունային և բացվող", r1t: "Փափուկ կահույք", r1: "«Գաբաննա» և «Գլամուր» անկյունային բազմոցներ, բացվող «Բռաբուս»՝ պահարանով, և «Փրինսթոն» հավաքածուն։ Եկեք և նստեք դրանց վրա սրահում։",
+      t1a: "«Գաբաննա»", t1b: "«Գլամուր»", t1c: "«Բռաբուս»", t1d: "«Փրինսթոն»",
+      r2c: "6 կտոր", r2t: "Ննջասենյակներ", r2: "«Յասմին» և «Ազիլիա» հավաքածուներ՝ 6 կտորից։ Հիմա յուրաքանչյուրին՝ ներքնակ նվեր։",
+      t2a: "«Յասմին»", t2b: "«Ազիլիա»", t2c: "ներքնակ նվեր",
+      r3c: "սեղան + աթոռներ", r3t: "Ճաշասենյակներ", r3: "Ճաշասեղան՝ վեց փափուկ աթոռով, 489 000 ֏ ամբողջ հավաքածուի համար։ Տեղ կա մեծ ընտանիքի և տոնական հյուրերի համար։",
+      t3a: "489 000 ֏", t3b: "փափուկ աթոռներ", t3c: "մեծ ընտանիքի համար",
+      r4c: "ձեր չափերով", r4t: "Պատվերով խոհանոցներ", r4: "Նախագծում ենք ձեր սենյակի, ոճի և բյուջեի համար, պատրաստում մեր արտադրամասում և տեղադրում ինքներս։",
+      t4a: "նախագիծ", t4b: "սեփական արտադրամաս", t4c: "տեղադրում",
+      rowBtn: "Դիտել մոդելները", kitLink: "Ինչպես ենք աշխատում",
+      n1: "բուկլե և փայտ", n2: "թավիշ՝ կապիտոնե կարով", n3: "բազկաթոռ՝ պլեդով", n5: "ննջասենյակ՝ տաք փայտով", n6: "սեղան մեծ ընտանիքի համար",
+      catNote: "Լուսանկարները՝ Unsplash-ի օրինակներ։ Աշխատող տարբերակում՝ ELKA սրահի լուսանկարներ։",
+      modelsTitle: "Մոդելներ սրահից", modelsHint: "Անունները և գինը՝ ELKA-ի Facebook գրառումներից",
+      priceAsk: "… ֏", priceMeasure: "չափագրումից հետո",
+      modelsNote: "«… ֏»՝ գինը սրահը կուղարկի աշխատող տարբերակի համար։ Մոդելները և ճաշասեղանի հավաքածուի գինը՝ ELKA-ի Facebook էջից, հոկտեմբեր–նոյեմբեր 2026։ Լուսանկարները՝ օրինակներ։",
+      allBtn: "Կատալոգ-գիրքը",
+      kitTitle: "Պատվերով խոհանոցներ", ks1: "Խոհանոց,", ks2: "ինչպես պատկերացնում եք",
+      kitLead: "Խոհանոցը չենք ընտրում կատալոգից. այն նախագծում ենք ձեր սենյակի համար՝ հաշվի առնելով չափերը, ձեր սովորությունները և ինտերիերի ոճը։",
+      k1t: "Չափագրում", k1: "Կգանք և կչափենք պատերը, պատուհանները, խողովակներն ու վարդակները։ Անվճար։",
+      k2t: "Նախագիծ", k2: "Միասին կընտրենք ճակատները, սեղանի երեսը և ֆուրնիտուրան, ցույց կտանք նախագիծն ու գինը։",
+      k3t: "Արտադրություն", k3: "Իրանները կձևաբացենք և կհավաքենք մեր արտադրամասում՝ CNC հաստոցով։",
+      k4t: "Տեղադրում", k4: "Կբերենք և կտեղադրենք անվճար։",
+      kitCta: "Պատվիրել խոհանոցի հաշվարկ",
+      ctaTitle: "Առաքում և տեղադրում՝ անվճար", ctaText: "Պատվիրեք կայքում՝ կբերենք և կհավաքենք ինքներս։ Ապառիկով գինը նույնն է։", ctaBtn: "Ընտրել մոդել",
+      revTitle: "Ինչու են մեզ ընտրում",
+      quote: "Մեզ դիմում են, երբ ուզում են, որ ամեն ինչ իր տեղը գտնի՝ ճիշտ այնպես, ինչպես ծրագրել եք. բազմոց, որը ճիշտ կտեղավորվի պատի մոտ, խոհանոց՝ սանտիմետր առ սանտիմետր, և ննջասենյակ՝ մեկ հավաքածուով։",
+      chipRatings: "գնահատական", chipFollowers: "հազ. հետևորդ Facebook-ում", chip2: "7 գնահատական", revBtn: "Կարդալ կարծիքները →",
+      addCart: "Ավելացնել", inCart: "Ավելացված է ✓",
+      cartTitle: "Զամբյուղ", cartEmpty: "Զամբյուղը դատարկ է։ Ընտրեք մոդել կատալոգից։", cartToCatalog: "Ընտրել մոդել",
+      cartDelivery: "Առաքում և տեղադրում", cartFree: "անվճար", cartTotal: "Ընդամենը",
+      cartNote: "«… ֏» գինը և վերջնական գումարը կհաստատենք զանգով։",
+      cartCheckout: "Ձևակերպել պատվերը", cartBack: "← Վերադառնալ զամբյուղ", cartRemove: "Հեռացնել", cartMinus: "Պակասեցնել քանակը", cartPlus: "Ավելացնել քանակը",
+      phName: "Ձեր անունը", phPhone: "Հեռախոսահամար", phAddr: "Առաքման հասցե", phNote: "Մեկնաբանություն՝ գույն, հարկ, վերելակ (պարտադիր չէ)",
+      fName: "Անուն", fPhone: "Հեռախոս", fAddr: "Հասցե", fDate: "Առաքման ցանկալի օրը",
+      payLbl: "Վճարում", pay1: "Առաքման ժամանակ", pay2: "Ապառիկով", pay3: "Քարտով առցանց",
+      consent: "Համաձայն եմ անձնական տվյալների մշակմանը՝ համաձայն", policyLink: "գաղտնիության քաղաքականության",
+      send: "Հաստատել պատվերը", doneTitle: "Պատվերը ձևակերպված է",
+      doneText: "Ցուցադրական տարբերակ. աշխատող կայքում պատվերը անմիջապես կհասնի սրահին Telegram-ով կամ WhatsApp-ով, իսկ քարտով վճարումը կմիացնենք բանկի միջոցով։",
+      eName: "Լրացրեք անունը", ePhone: "Նշեք ճիշտ հեռախոսահամար", eAddr: "Նշեք առաքման հասցեն", eConsent: "Անհրաժեշտ է ձեր համաձայնությունը", eCart: "Զամբյուղը դատարկ է",
+      visitTitle: "Ինչպես գտնել մեզ",
+      addrLabel: "Հասցե", addr: "Աբովյան, Երևանյան 1/34", hoursLabel: "Ժամեր", hours: "Ճշտեք զանգով", phoneLabel: "Հեռախոս",
+      popBadge: "Կահույքի սրահ",
+      routeBtn: "Երթուղի", openY: "Բացել Yandex Քարտեզներում", routeG: "Երթուղի Google-ով",
+      fcSections: "Բաժիններ", fcContacts: "Կոնտակտներ", fcDocs: "Փաստաթղթեր", fcDemo: "Ցուցադրական տարբերակ", fcDemoText: "Լուսանկարները՝ Unsplash-ի օրինակներ։ Մոդելները, գինը և պայմանները՝ ELKA-ի Facebook էջից, նոյեմբեր 2026։",
+      footer: "© 2026 ELKA կահույքի սրահ, Աբովյան", footerDemo: "Կայքի ցուցադրական տարբերակ",
+      dockCall: "Զանգ", dockCart: "Զամբյուղ", dockRoute: "Երթուղի",
+      paletteLbl: "Գույնը", palLinen: "Վուշ և ընկուզենի", palBoucle: "Բուկլե", palVelvet: "Գրաֆիտե թավիշ", palWalnut: "Մուգ ընկուզենի",
+      bmTag: "«… ֏»՝ գինը կճշտենք", bmSub: "կատալոգ", bmNote: "Մոդելներ սրահից։ Ընտրեք մոդելը կամ թերթեք սլաքներով։", bmPrice: "Գին",
+      policyTitle: "Գաղտնիության քաղաքականություն",
+      policyText: "Ցուցադրական տարբերակում փաստաթուղթը դեռ պատրաստված չէ։ Աշխատող կայքում այստեղ կլինի ամբողջական տեքստը՝ ՀՀ «Անձնական տվյալների պաշտպանության մասին» օրենքին համապատասխան։",
+      close: "Փակել"
+    },
+    ru: {
+      ribbon: "Демо для владельца ELKA. Это не официальный сайт.",
+      title: "ELKA — мебельный салон в Абовяне",
+      navCatalog: "Каталог", navKitchens: "Кухни", navContact: "Контакты", navAbout: "О нас", navCart: "Корзина",
+      heroAccent: "мебельный салон в Абовяне",
+      heroText: "Диваны, спальни, столовые и кухни на заказ — со своего производства. Замер, доставка и сборка бесплатно.",
+      pShop: "Выбрать мебель", pCatalog: "Каталог", pKitchens: "Кухни на заказ", pRoute: "Как добраться",
+      wFree: "бесплатно", w1: "Замерим", w2: "Привезём", w3: "Соберём",
+      ws1: "Мастер приедет, измерит комнату и подскажет, какая модель встанет.",
+      ws2: "Диван, спальню или кухню доставим до двери.",
+      ws3: "Соберём и установим на месте — вам останется только сесть.",
+      aboutTitle: "О нас",
+      st1: "Мебель", st2: "со своего производства,", st3: "кухни", st4: "по вашим размерам",
+      aboutLead: "ELKA — мебельный салон на улице Ереванян, рядом с вокзалом Абовяна. В зале — угловые диваны, спальные гарнитуры, столы со стульями и кресла. Кухни делаем на заказ: в своём цехе, на станке с ЧПУ, по размерам вашей комнаты.",
+      f1t: "Своё производство", f1: "Мебельщики, столяры и раскрой на ЧПУ — без посредников.",
+      f2t: "Замер бесплатно", f2: "Приедем, измерим комнату и подскажем, какая модель подойдёт.",
+      f3t: "Доставка и сборка", f3: "Бесплатно: привезём и соберём сами.",
+      f4t: "Рассрочка по той же цене", f4: "В рассрочку цена такая же, как при оплате сразу.",
+      ringText: "мебель ELKA · Абовян · Ереванян 1/34 · ",
+      catTitle: "Каталог", catLead: "Мягкая мебель, спальни, столовые и кухни: всё можно посмотреть и потрогать в салоне на Ереванян.",
+      r1c: "угловые и раскладные", r1t: "Мягкая мебель", r1: "Угловые диваны «Габанна» и «Гламур», раскладной «Брабус» с ящиком и комплект «Принстон». Приходите посидеть на них в салоне.",
+      t1a: "«Габанна»", t1b: "«Гламур»", t1c: "«Брабус»", t1d: "«Принстон»",
+      r2c: "6 предметов", r2t: "Спальни", r2: "Гарнитуры «Ясмин» и «Азилия» из 6 предметов. Сейчас к каждому — матрас в подарок.",
+      t2a: "«Ясмин»", t2b: "«Азилия»", t2c: "матрас в подарок",
+      r3c: "стол + стулья", r3t: "Столовые", r3: "Обеденный стол с шестью мягкими стульями — 489 000 ֏ за весь комплект. Места хватит большой семье и гостям по праздникам.",
+      t3a: "489 000 ֏", t3b: "мягкие стулья", t3c: "для большой семьи",
+      r4c: "по вашим размерам", r4t: "Кухни на заказ", r4: "Проектируем под вашу комнату, стиль и бюджет, делаем в своём цехе и устанавливаем сами.",
+      t4a: "проект", t4b: "свой цех", t4c: "установка",
+      rowBtn: "Смотреть модели", kitLink: "Как мы работаем",
+      n1: "букле и дерево", n2: "велюр с каретной стяжкой", n3: "кресло с пледом", n5: "спальня в тёплом дереве", n6: "стол для большой семьи",
+      catNote: "Фото — образцы с Unsplash. В рабочей версии — снимки из салона ELKA.",
+      modelsTitle: "Модели из салона", modelsHint: "Названия и цена — из постов ELKA в Facebook",
+      priceAsk: "… ֏", priceMeasure: "после замера",
+      modelsNote: "«… ֏» — цену пришлёт салон для рабочей версии. Модели и цена стола с 6 стульями — со страницы ELKA в Facebook, октябрь–ноябрь 2026. Фото — образцы.",
+      allBtn: "Каталог-книжка",
+      kitTitle: "Кухни на заказ", ks1: "Кухня,", ks2: "какой вы её представляете",
+      kitLead: "Кухню не выбирают из каталога: мы проектируем её под вашу комнату, с учётом размеров, ваших привычек и стиля интерьера.",
+      k1t: "Замер", k1: "Приедем и измерим стены, окна, трубы и розетки. Бесплатно.",
+      k2t: "Проект", k2: "Вместе подберём фасады, столешницу и фурнитуру, покажем проект и цену.",
+      k3t: "Производство", k3: "Раскроим и соберём корпуса в своём цехе на станке с ЧПУ.",
+      k4t: "Установка", k4: "Привезём и установим бесплатно.",
+      kitCta: "Заказать расчёт кухни",
+      ctaTitle: "Доставка и сборка — бесплатно", ctaText: "Оформите заказ на сайте — привезём и соберём сами. В рассрочку цена та же.", ctaBtn: "Выбрать модель",
+      revTitle: "За что нас выбирают",
+      quote: "К нам обращаются, когда нужно, чтобы всё встало на свои места — ровно так, как вы и задумали: диван, который точно встанет у стены, кухня по сантиметрам и спальня одним комплектом.",
+      chipRatings: "оценок", chipFollowers: "тыс. подписчиков в Facebook", chip2: "7 оценок", revBtn: "Читать отзывы →",
+      addCart: "В корзину", inCart: "Добавлено ✓",
+      cartTitle: "Корзина", cartEmpty: "Корзина пуста. Выберите модель в каталоге.", cartToCatalog: "Выбрать модель",
+      cartDelivery: "Доставка и сборка", cartFree: "бесплатно", cartTotal: "Итого",
+      cartNote: "Цены «… ֏» и итоговую сумму подтвердим звонком.",
+      cartCheckout: "Оформить заказ", cartBack: "← Назад к корзине", cartRemove: "Убрать", cartMinus: "Меньше", cartPlus: "Больше",
+      phName: "Ваше имя", phPhone: "Номер телефона", phAddr: "Адрес доставки", phNote: "Комментарий: цвет, этаж, лифт (необязательно)",
+      fName: "Имя", fPhone: "Телефон", fAddr: "Адрес", fDate: "Желаемый день доставки",
+      payLbl: "Оплата", pay1: "При доставке", pay2: "В рассрочку", pay3: "Картой онлайн",
+      consent: "Согласен на обработку персональных данных согласно", policyLink: "политике конфиденциальности",
+      send: "Подтвердить заказ", doneTitle: "Заказ оформлен",
+      doneText: "Это демо: в рабочей версии заказ сразу придёт салону в Telegram или WhatsApp, а оплату картой подключим через банк.",
+      eName: "Укажите имя", ePhone: "Укажите верный номер телефона", eAddr: "Укажите адрес доставки", eConsent: "Нужно ваше согласие", eCart: "Корзина пуста",
+      visitTitle: "Как нас найти",
+      addrLabel: "Адрес", addr: "Абовян, ул. Ереванян, 1/34", hoursLabel: "Часы", hours: "Уточняйте по телефону", phoneLabel: "Телефон",
+      popBadge: "Мебельный салон",
+      routeBtn: "Маршрут", openY: "Открыть в Яндекс Картах", routeG: "Маршрут в Google",
+      fcSections: "Разделы", fcContacts: "Контакты", fcDocs: "Документы", fcDemo: "Демо-версия", fcDemoText: "Фото — образцы с Unsplash. Модели, цена и условия — со страницы ELKA в Facebook, ноябрь 2026.",
+      footer: "© 2026 мебельный салон ELKA, Абовян", footerDemo: "Демо-версия сайта",
+      dockCall: "Звонок", dockCart: "Корзина", dockRoute: "Маршрут",
+      paletteLbl: "Цвет", palLinen: "Лён и орех", palBoucle: "Букле", palVelvet: "Графитовый велюр", palWalnut: "Тёмный орех",
+      bmTag: "«… ֏» — цену уточним", bmSub: "каталог", bmNote: "Модели из салона. Выберите модель или листайте стрелками.", bmPrice: "Цена",
+      policyTitle: "Политика конфиденциальности",
+      policyText: "В демо-версии документ ещё не подготовлен. На рабочем сайте здесь будет полный текст в соответствии с законом РА «О защите персональных данных».",
+      close: "Закрыть"
+    },
+    en: {
+      ribbon: "Demo for the owner of ELKA. This is not the official website.",
+      title: "ELKA — furniture showroom in Abovyan",
+      navCatalog: "Catalogue", navKitchens: "Kitchens", navContact: "Contacts", navAbout: "About", navCart: "Cart",
+      heroAccent: "furniture showroom in Abovyan",
+      heroText: "Sofas, bedrooms, dining sets and made-to-measure kitchens from our own workshop. Measuring, delivery and assembly are free.",
+      pShop: "Shop furniture", pCatalog: "Catalogue", pKitchens: "Custom kitchens", pRoute: "Directions",
+      wFree: "free of charge", w1: "We measure", w2: "We deliver", w3: "We assemble",
+      ws1: "Our craftsman comes over, measures the room and tells you which model will fit.",
+      ws2: "A sofa, a bedroom or a kitchen, delivered to your door.",
+      ws3: "We assemble and install everything on site; all that’s left is to sit down.",
+      aboutTitle: "About us",
+      st1: "Furniture", st2: "from our own workshop,", st3: "kitchens", st4: "made to your size",
+      aboutLead: "ELKA is a furniture showroom on Yerevanyan Street, next to Abovyan railway station. On the floor: corner sofas, bedroom sets, dining sets and armchairs. Kitchens are made to order in our own workshop, on a CNC machine, to the size of your room.",
+      f1t: "Own production", f1: "Furniture makers, woodworkers and CNC cutting, with no middlemen.",
+      f2t: "Free measuring", f2: "We come over, measure the room and suggest a model that fits.",
+      f3t: "Delivery and assembly", f3: "Free: we bring it and put it together ourselves.",
+      f4t: "Instalments, same price", f4: "Pay in instalments and the price is the same as paying at once.",
+      ringText: "ELKA furniture · Abovyan · 1/34 Yerevanyan · ",
+      catTitle: "Catalogue", catLead: "Sofas, bedrooms, dining sets and kitchens: see and touch everything at the showroom on Yerevanyan Street.",
+      r1c: "corner and sofa beds", r1t: "Sofas", r1: "Gabanna and Glamour corner sofas, the Brabus sofa bed with a storage box, and the Princeton set. Come and sit on them at the showroom.",
+      t1a: "Gabanna", t1b: "Glamour", t1c: "Brabus", t1d: "Princeton",
+      r2c: "6-piece sets", r2t: "Bedrooms", r2: "Yasmin and Azilia bedroom sets of 6 pieces. Right now each one comes with a free mattress.",
+      t2a: "Yasmin", t2b: "Azilia", t2c: "free mattress",
+      r3c: "table + chairs", r3t: "Dining", r3: "A dining table with six upholstered chairs: 489,000 ֏ for the whole set. Room for a big family and holiday guests.",
+      t3a: "489,000 ֏", t3b: "upholstered chairs", t3c: "for a big family",
+      r4c: "made to your size", r4t: "Custom kitchens", r4: "Designed for your room, style and budget, made in our workshop and installed by our team.",
+      t4a: "design", t4b: "own workshop", t4c: "installation",
+      rowBtn: "View models", kitLink: "How we work",
+      n1: "bouclé and wood", n2: "velvet with button tufting", n3: "armchair with a throw", n5: "bedroom in warm wood", n6: "a table for a big family",
+      catNote: "Sample photos from Unsplash. The live site will show photos from the ELKA showroom.",
+      modelsTitle: "Models from the showroom", modelsHint: "Names and price from ELKA’s Facebook posts",
+      priceAsk: "… ֏", priceMeasure: "after measuring",
+      modelsNote: "“… ֏”: the showroom will send prices for the live site. Models and the dining set price are from ELKA’s Facebook page, October–November 2026. Photos are samples.",
+      allBtn: "Catalogue book",
+      kitTitle: "Custom kitchens", ks1: "A kitchen", ks2: "just as you picture it",
+      kitLead: "A kitchen isn’t picked from a catalogue: we design it for your room, taking into account its size, your habits and the style of your interior.",
+      k1t: "Measuring", k1: "We come and measure the walls, windows, pipes and sockets. Free of charge.",
+      k2t: "Design", k2: "Together we choose the fronts, worktop and fittings, then show you the design and the price.",
+      k3t: "Production", k3: "We cut and assemble the cabinets in our own workshop on a CNC machine.",
+      k4t: "Installation", k4: "We deliver and install it free of charge.",
+      kitCta: "Order a kitchen quote",
+      ctaTitle: "Free delivery and assembly", ctaText: "Order on the site and we’ll bring it and put it together ourselves. Instalments cost the same.", ctaBtn: "Choose a model",
+      revTitle: "Why people choose us",
+      quote: "People come to us when they want everything to fall into place, just as they planned it: a sofa that fits the wall exactly, a kitchen measured to the centimetre and a bedroom in one set.",
+      chipRatings: "ratings", chipFollowers: "K followers on Facebook", chip2: "7 ratings", revBtn: "Read reviews →",
+      addCart: "Add to cart", inCart: "Added ✓",
+      cartTitle: "Cart", cartEmpty: "Your cart is empty. Choose a model from the catalogue.", cartToCatalog: "Choose a model",
+      cartDelivery: "Delivery and assembly", cartFree: "free", cartTotal: "Total",
+      cartNote: "We’ll confirm “… ֏” prices and the final total by phone.",
+      cartCheckout: "Place order", cartBack: "← Back to cart", cartRemove: "Remove", cartMinus: "Fewer", cartPlus: "More",
+      phName: "Your name", phPhone: "Phone number", phAddr: "Delivery address", phNote: "Comment: colour, floor, lift (optional)",
+      fName: "Name", fPhone: "Phone", fAddr: "Address", fDate: "Preferred delivery date",
+      payLbl: "Payment", pay1: "On delivery", pay2: "In instalments", pay3: "Card online",
+      consent: "I agree to the processing of my personal data under the", policyLink: "privacy policy",
+      send: "Confirm order", doneTitle: "Order placed",
+      doneText: "This is a demo: on the live site the order will go straight to the showroom via Telegram or WhatsApp, and card payment will be connected through a bank.",
+      eName: "Please enter your name", ePhone: "Please enter a valid phone number", eAddr: "Please enter the delivery address", eConsent: "Your consent is required", eCart: "Your cart is empty",
+      visitTitle: "How to find us",
+      addrLabel: "Address", addr: "Abovyan, 1/34 Yerevanyan St.", hoursLabel: "Hours", hours: "Call to check", phoneLabel: "Phone",
+      popBadge: "Furniture showroom",
+      routeBtn: "Directions", openY: "Open in Yandex Maps", routeG: "Directions in Google",
+      fcSections: "Sections", fcContacts: "Contacts", fcDocs: "Documents", fcDemo: "Demo version", fcDemoText: "Sample photos from Unsplash. Models, prices and terms from ELKA’s Facebook page, November 2026.",
+      footer: "© 2026 ELKA furniture showroom, Abovyan", footerDemo: "Website demo",
+      dockCall: "Call", dockCart: "Cart", dockRoute: "Directions",
+      paletteLbl: "Colour", palLinen: "Linen & walnut", palBoucle: "Bouclé", palVelvet: "Graphite velvet", palWalnut: "Dark walnut",
+      bmTag: "“… ֏”: price to be confirmed", bmSub: "catalogue", bmNote: "Models from the showroom. Pick a model or flip through with the arrows.", bmPrice: "Price",
+      policyTitle: "Privacy policy",
+      policyText: "The document is not ready yet in this demo. The live site will have the full text in line with the RA Law on Personal Data Protection.",
+      close: "Close"
+    }
+  };
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // В заглавных армянское «և» браузер превращает в устаревшее «ԵՒ»; по нормам нужно «ԵՎ»
+  const UPPER = "h1, h2, h3, .statement, .cap, .bm-sub, .dtype";
+  const up = s => String(s).replace(/և/g, "եվ");
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  let lang = "hy";
+  try { const saved = localStorage.getItem("elka-lang"); if (saved && T[saved]) lang = saved; } catch (e) {}
+  const urlLang = new URLSearchParams(location.search).get("lang");
+  if (urlLang && T[urlLang]) lang = urlLang;
+
+  const fmtPrice = n => (lang === "en" ? n.toLocaleString("en-US") : String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ")) + " ֏";
+  const priceOf = m => m.price ? fmtPrice(m.price) : (m.kitchen ? T[lang].priceMeasure : T[lang].priceAsk);
+
+  function setLang(next) {
+    lang = next;
+    const d = T[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const v = d[el.getAttribute("data-i18n")];
+      if (v != null) el.textContent = el.closest(UPPER) ? up(v) : v;
+    });
+    document.querySelectorAll("[data-i18n-title]").forEach(el => { el.title = d[el.dataset.i18nTitle]; });
+    document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = d[el.dataset.i18nPh]; });
+    document.querySelectorAll("[data-i18n-aria]").forEach(el => el.setAttribute("aria-label", d[el.dataset.i18nAria]));
+    document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    renderModels();
+    renderBook();
+    renderCart();
+    document.querySelectorAll("[data-count][data-done]").forEach(el => { el.textContent = fmtNum(parseFloat(el.dataset.count), +(el.dataset.dec || 0)); });
+    ["eName", "ePhone", "eAddr", "eConsent", "eCart"].forEach(id => { document.getElementById(id).textContent = ""; });
+    try { localStorage.setItem("elka-lang", lang); } catch (e) {}
+  }
+
+  // Карточки моделей: вся карточка открывает модель в каталоге-книжке
+  const mgrid = document.getElementById("mgrid");
+  const BAG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></svg>';
+  function renderModels() {
+    mgrid.innerHTML = MODELS.map((m, i) => {
+      const L = m[lang];
+      return `<article class="dcard" style="--i:${i}">
+        <div class="ph"><img src="${U(m.img, 700)}" alt="" loading="lazy"></div>
+        <span class="dtype">${esc(up(L.t))}</span>
+        <div class="dtop"><button type="button" class="dname" data-open-book data-page="${i + 1}">${esc(L.n)}</button><em>${esc(priceOf(m))}</em></div>
+        <p>${esc(L.d)}</p>
+        <button class="btn btn-line btn-s dadd" type="button" data-add="${i}">${BAG}<span>${esc(T[lang].addCart)}</span></button>
+      </article>`;
+    }).join("");
+  }
+
+  document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+  // Палитра (только для демо)
+  function setPalette(p) {
+    if (!document.querySelector(`.palette [data-p="${p}"]`)) p = "linen";
+    document.documentElement.dataset.palette = p;
+    document.querySelectorAll(".palette button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.p === p)));
+    try { localStorage.setItem("elka-palette", p); } catch (e) {}
+  }
+  const paletteBox = document.querySelector(".palette");
+  // до 1360 px палитра свёрнута в кружок: первое нажатие раскрывает её
+  const narrow = window.matchMedia("(max-width: 1360px)");
+  document.querySelectorAll(".palette button").forEach(b => b.addEventListener("click", () => {
+    // на телефоне первое нажатие раскрывает свёрнутую палитру, второе — выбирает цвет
+    if (narrow.matches && !paletteBox.classList.contains("open")) { paletteBox.classList.add("open"); return; }
+    setPalette(b.dataset.p);
+    paletteBox.classList.remove("open");
+  }));
+  setPalette(new URLSearchParams(location.search).get("palette") || document.documentElement.dataset.palette || "linen");
+
+  // Шапка: под полосой «демо», плотная после первого экрана, прячется при прокрутке вниз; полоса прогресса
+  const header = document.getElementById("header");
+  const ribbon = document.querySelector(".demo-ribbon");
+  const progress = document.getElementById("progress");
+  let lastY = window.scrollY;
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.style.top = Math.max(0, ribbon.offsetHeight - y) + "px";
+    header.classList.toggle("solid", y > innerHeight * 0.7);
+    if (y > innerHeight && y > lastY + 4) header.classList.add("hide");
+    else if (y < lastY - 4 || y < innerHeight) header.classList.remove("hide");
+    lastY = y;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+
+  // Слайд-шоу первого экрана
+  const slides = [...document.querySelectorAll("#slides img")];
+  let cur = 0;
+  if (!reduceMotion) {
+    setInterval(() => {
+      slides[cur].classList.remove("on");
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add("on");
+    }, 6000);
+  }
+
+  // Счётчики: число растёт от нуля, когда попадает на экран
+  const fmtNum = (v, dec) => v.toFixed(dec).replace(".", lang === "en" ? "." : ",");
+  function countUp(el) {
+    const to = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0);
+    if (reduceMotion) { el.textContent = fmtNum(to, dec); return; }
+    const t0 = performance.now(), dur = 1300;
+    const tick = t => {
+      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = fmtNum(to * e, dec);
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  // Меню-книжка строится до наблюдателя появления, чтобы карточки моделей уже были в разметке
+  const cbook = document.getElementById("cbook");
+  const bmPages = document.getElementById("bmPages");
+  const bmTabs = document.getElementById("bmTabs");
+  const dots = document.getElementById("bmDots");
+  let pages = [], page = 0;
+  function renderBook() {
+    const d = T[lang];
+    const cover = `<div class="bm-page bm-cover">
+        <div class="bm-logo">ELKA</div>
+        <div class="bm-sub">${esc(up(d.bmSub))}</div>
+        <p class="bm-note">${esc(d.bmNote)}</p>
+        <div class="bm-toc">${MODELS.map((m, i) => `<button type="button" data-go="${i + 1}">${esc(m[lang].n)}<small>${esc(m[lang].t)}</small></button>`).join("")}</div>
+      </div>`;
+    const models = MODELS.map((m, i) => {
+      const L = m[lang];
+      return `<div class="bm-page"><div class="bm-model">
+        <img src="${U(m.img, 1000)}" alt="" loading="lazy">
+        <div class="cap">${esc(up(L.t))}</div>
+        <h3>${esc(up(L.n))}</h3>
+        <p>${esc(L.d)}</p>
+        <ul class="bm-feat">${L.f.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
+        <div class="bm-price"><span>${esc(d.bmPrice)}</span><b>${esc(priceOf(m))}</b><button class="btn btn-s" type="button" data-add="${i}"><span>${esc(d.addCart)}</span></button></div>
+      </div></div>`;
+    }).join("");
+    bmPages.innerHTML = cover + models;
+    bmTabs.innerHTML = MODELS.map((m, i) => `<button type="button" role="tab" data-go="${i + 1}">${esc(m[lang].n)}</button>`).join("");
+    pages = [...bmPages.querySelectorAll(".bm-page")];
+    dots.innerHTML = pages.map(() => "<span></span>").join("");
+    showPage(page);
+  }
+  function showPage(n) {
+    page = Math.max(0, Math.min(pages.length - 1, n));
+    pages.forEach((p, i) => { p.classList.toggle("on", i === page); if (i === page) p.scrollTop = 0; });
+    [...dots.children].forEach((d, i) => d.classList.toggle("on", i === page));
+    [...bmTabs.children].forEach((t, i) => {
+      const on = i + 1 === page;
+      t.classList.toggle("on", on);
+      t.setAttribute("aria-selected", String(on));
+      if (on && cbook.open) t.scrollIntoView({ block: "nearest", inline: "center", behavior: reduceMotion ? "auto" : "smooth" });
+    });
+    document.getElementById("bmPrev").disabled = page === 0;
+    document.getElementById("bmNext").disabled = page === pages.length - 1;
+  }
+  // Кнопки «Каталог», «Смотреть модели», «В корзину», «Корзина» (карточки перерисовываются, поэтому слушаем документ)
+  document.addEventListener("click", e => {
+    const add = e.target.closest("[data-add]");
+    if (add) {
+      addToCart(+add.dataset.add);
+      if (add.hasAttribute("data-then-open")) openCart();
+      return;
+    }
+    const oc = e.target.closest("[data-open-cart]");
+    if (oc) { e.preventDefault(); openCart(); return; }
+    const b = e.target.closest("[data-open-book]");
+    if (!b) return;
+    cbook.showModal();
+    showPage(+(b.dataset.page || 0));
+  });
+  cbook.addEventListener("click", e => {
+    const go = e.target.closest("[data-go]");
+    if (go) { showPage(+go.dataset.go); return; }
+    if (e.target === cbook) cbook.close();
+  });
+
+  // Корзина (демо): хранится только в браузере посетителя; заказ никуда не уходит, оплаты нет
+  const cart = document.getElementById("cart");
+  const cartList = document.getElementById("cartList");
+  let items = [];
+  try { items = JSON.parse(localStorage.getItem("elka-cart") || "[]").filter(x => MODELS[x.i] && x.q > 0); } catch (e) { items = []; }
+  const saveCart = () => { try { localStorage.setItem("elka-cart", JSON.stringify(items)); } catch (e) {} };
+  const cartCount = () => items.reduce((s, x) => s + x.q, 0);
+  // итог: сумма известных цен; если есть модели с ценой «… ֏» или кухня, добавляем «+ …»
+  function cartTotal() {
+    let sum = 0, open = false;
+    items.forEach(x => { const m = MODELS[x.i]; if (m.price) sum += m.price * x.q; else open = true; });
+    if (!sum) return open ? "… ֏" : fmtPrice(0);
+    return fmtPrice(sum) + (open ? " + …" : "");
+  }
+  function renderCart() {
+    const d = T[lang];
+    cartList.innerHTML = items.length ? items.map((x, n) => {
+      const m = MODELS[x.i], L = m[lang];
+      return `<div class="cart-item">
+        <img src="${U(m.img, 200)}" alt="">
+        <div><b>${esc(L.n)}</b><small>${esc(L.t)}</small><em>${esc(priceOf(m))}</em></div>
+        <div><div class="qty"><button type="button" data-qty="${n}" data-d="-1" aria-label="${esc(d.cartMinus)}">−</button><span>${x.q}</span><button type="button" data-qty="${n}" data-d="1" aria-label="${esc(d.cartPlus)}">+</button></div>
+        <button type="button" class="cart-del" data-del="${n}">${esc(d.cartRemove)}</button></div>
+      </div>`;
+    }).join("") : `<div class="cart-empty">${BAG}<p>${esc(d.cartEmpty)}</p><a class="btn btn-primary btn-s" href="#models" data-close-cart>${esc(d.cartToCatalog)}</a></div>`;
+    document.getElementById("cartTotal").textContent = cartTotal();
+    document.getElementById("toCheckout").disabled = !items.length;
+    const c = cartCount();
+    document.querySelectorAll("[data-cart-count]").forEach(b => { b.textContent = c; b.classList.toggle("on", c > 0); });
+    // у моделей, которые уже в корзине, кнопка «Добавлено ✓»; повторное нажатие открывает корзину
+    document.querySelectorAll("[data-add]").forEach(b => {
+      const inCart = items.some(x => x.i === +b.dataset.add);
+      b.classList.toggle("added", inCart);
+      const s = b.querySelector("span");
+      if (s) s.textContent = inCart ? d.inCart : d[b.dataset.label || "addCart"];
+    });
+  }
+  function addToCart(i) {
+    if (items.some(x => x.i === i)) { openCart(); return; }
+    items.push({ i, q: 1 });
+    saveCart();
+    renderCart();
+    document.querySelectorAll("[data-cart-count]").forEach(b => { b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); });
+  }
+  function openCart() {
+    if (cbook.open) cbook.close();
+    cart.dataset.step = "list";
+    renderCart();
+    if (!cart.open) cart.showModal();
+  }
+  cart.addEventListener("click", e => {
+    if (e.target === cart) { cart.close(); return; }
+    const q = e.target.closest("[data-qty]");
+    if (q) { const x = items[+q.dataset.qty]; x.q = Math.max(1, Math.min(9, x.q + +q.dataset.d)); saveCart(); renderCart(); return; }
+    const del = e.target.closest("[data-del]");
+    if (del) { items.splice(+del.dataset.del, 1); saveCart(); renderCart(); return; }
+    if (e.target.closest("[data-close-cart]")) cart.close();
+  });
+  document.getElementById("cartClose").addEventListener("click", () => cart.close());
+  document.getElementById("toCheckout").addEventListener("click", () => {
+    if (!items.length) return;
+    cart.dataset.step = "checkout";
+    cart.querySelector(".cart-body").scrollTop = 0;
+    document.getElementById("fName").focus({ preventScroll: true });
+  });
+  document.getElementById("cartBack").addEventListener("click", () => { cart.dataset.step = "list"; });
+  document.getElementById("bmPrev").addEventListener("click", () => showPage(page - 1));
+  document.getElementById("bmNext").addEventListener("click", () => showPage(page + 1));
+  document.getElementById("bmClose").addEventListener("click", () => cbook.close());
+  cbook.addEventListener("keydown", e => {
+    if (e.key === "ArrowRight") showPage(page + 1);
+    if (e.key === "ArrowLeft") showPage(page - 1);
+  });
+  let touchX = null, touchY = null;
+  bmPages.addEventListener("touchstart", e => { touchX = e.touches[0].clientX; touchY = e.touches[0].clientY; }, { passive: true });
+  bmPages.addEventListener("touchend", e => {
+    if (touchX == null) return;
+    const dx = e.changedTouches[0].clientX - touchX, dy = e.changedTouches[0].clientY - touchY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) showPage(page + (dx < 0 ? 1 : -1));
+    touchX = touchY = null;
+  });
+
+  setLang(lang);
+
+  // Появление блоков, групп по очереди и счётчиков. Считаем по положению на экране при каждой прокрутке:
+  // IntersectionObserver не срабатывает в фоновой вкладке и в браузере без окна (см. заметки к сайтам)
+  document.querySelectorAll(".stagger").forEach(g => [...g.children].forEach((c, i) => c.style.setProperty("--i", i)));
+  const revealEls = [...document.querySelectorAll(".reveal, .stagger, [data-count]")];
+  function revealFrame() {
+    const vh = innerHeight;
+    revealEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      const on = r.top < vh * 0.92 && r.bottom > 0;
+      if (el.dataset.count) {
+        if (on && !el.dataset.done) { el.dataset.done = 1; countUp(el); }
+        else if (!on && r.top >= vh) delete el.dataset.done;
+      } else if (on) el.classList.add("in");
+      // анимации повторяются: блок, ушедший вниз за экран, снова «прячется» и появится заново
+      else if (r.top >= vh) el.classList.remove("in");
+    });
+  }
+
+  // Подсветка текущего раздела в шапке: раздел, который пересекает середину экрана
+  const navLinks = [...document.querySelectorAll("nav.links a")];
+  const spySections = ["about", "catalog", "kitchens", "visit"].map(id => document.getElementById(id));
+  function spyFrame() {
+    const mid = innerHeight / 2;
+    const cur = spySections.find(s => { const r = s.getBoundingClientRect(); return r.top <= mid && r.bottom > mid; });
+    navLinks.forEach(a => a.setAttribute("aria-current", String(!!cur && a.getAttribute("href") === "#" + cur.id)));
+  }
+
+  // Маршрут заказа кухни: пунктир змейкой (слева направо, поворот, справа налево…), этапы на поворотах,
+  // круг едет по линии вместе с прокруткой, пройденная часть закрашивается, этап загорается, когда круг до него доехал
+  const route = document.getElementById("route");
+  const routeBase = route.querySelector(".route-base");
+  const routeDone = route.querySelector(".route-done");
+  const routeDot = route.querySelector(".route-dot");
+  const routeSvg = route.querySelector(".route-svg");
+  const routeStops = [...route.querySelectorAll(".stop")];
+  let routeLen = 0, stopAt = [];
+  function layoutRoute() {
+    const W = route.clientWidth;
+    if (!W) return;
+    const small = W < 600;
+    const icoR = routeStops[0].querySelector(".ico").offsetWidth / 2;
+    const R = small ? 40 : 84;                       // ширина поворота
+    const gap = small ? 14 : 22;                     // от значка до текста
+    const padV = small ? 22 : 30;                    // от линии до текста сверху и снизу
+    const apexR = W - icoR - 2, apexL = icoR + 2;    // вершины поворотов: справа и слева
+    const xR = apexR - R, xL = apexL + R;            // где кончаются прямые участки
+    route.classList.add("laid");
+    // тексты: у правого поворота — слева от значка, у левого — справа; на телефоне всегда по левому краю
+    const heights = routeStops.map((s, i) => {
+      const t = s.querySelector(".stop-text");
+      const right = i % 2 === 0;
+      // ширина текста этапа: 440 px на ноутбуке, на больших мониторах до трети ширины маршрута
+      const textW = small ? W - icoR * 2 - gap - 4 : Math.min(Math.max(440, W * 0.3), W / 2 - icoR - gap);
+      t.classList.toggle("r", right && !small);
+      t.style.width = textW + "px";
+      t.style.left = (right ? apexR - icoR - gap - textW : apexL + icoR + gap) + "px";
+      return t.offsetHeight;
+    });
+    let y = 6, d = `M 2 ${y} H ${xR}`;
+    routeStops.forEach((s, i) => {
+      const h = Math.max(2 * R, heights[i] + padV * 2);
+      const right = i % 2 === 0;
+      const ax = right ? apexR : apexL, ay = y + h / 2;
+      d += right ? ` A ${R} ${h / 2} 0 0 1 ${xR} ${y + h}` : ` A ${R} ${h / 2} 0 0 0 ${xL} ${y + h}`;
+      y += h;
+      d += ` H ${right ? xL : (i === routeStops.length - 1 ? W - 2 : xR)}`;
+      const ico = s.querySelector(".ico"), t = s.querySelector(".stop-text");
+      ico.style.left = ax + "px"; ico.style.top = ay + "px";
+      t.style.top = (ay - heights[i] / 2) + "px";
+      s.dataset.ax = ax; s.dataset.ay = ay;
+    });
+    const H = y + 8;
+    route.style.height = H + "px";
+    routeSvg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    routeBase.setAttribute("d", d);
+    routeDone.setAttribute("d", d);
+    routeLen = routeDone.getTotalLength();
+    routeDone.style.strokeDasharray = routeLen;
+    // где на линии стоит каждый этап: ближайшая к вершине поворота точка
+    const N = 400, pts = [];
+    for (let k = 0; k <= N; k++) pts.push(routeDone.getPointAtLength(routeLen * k / N));
+    stopAt = routeStops.map(s => {
+      let best = 0, bd = Infinity;
+      pts.forEach((p, k) => { const dd = Math.hypot(p.x - s.dataset.ax, p.y - s.dataset.ay); if (dd < bd) { bd = dd; best = k; } });
+      return routeLen * best / N;
+    });
+  }
+  function routeFrame() {
+    if (!routeLen) return;
+    const r = route.getBoundingClientRect(), vh = innerHeight;
+    // круг начинает путь, когда маршрут показался снизу, и доезжает до конца, когда его низ поднялся к середине экрана
+    const p = reduceMotion ? 1 : Math.min(1, Math.max(0, (vh * 0.8 - r.top) / (r.height + vh * 0.3)));
+    const len = routeLen * p, pt = routeDone.getPointAtLength(len);
+    routeDone.style.strokeDashoffset = routeLen - len;
+    routeDot.setAttribute("cx", pt.x);
+    routeDot.setAttribute("cy", pt.y);
+    routeStops.forEach((s, i) => s.classList.toggle("on", len >= stopAt[i] - 1));
+  }
+
+  // Сцена из видео: «подушка» раскрывается на весь экран, фото разлетаются, слова листаются вбок
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const easeOut = t => 1 - Math.pow(1 - t, 3);
+  const story = document.getElementById("story");
+  const scats = [...story.querySelectorAll(".scat")];
+  const storyImg = story.querySelector(".story-center img");
+  const storyCenter = story.querySelector(".story-center");
+  const storyShade = story.querySelector(".story-shade");
+  const storyFree = story.querySelector(".story-free");
+  const track = story.querySelector(".track");
+  const words = [...track.children];
+  const subs = [...story.querySelectorAll(".story-sub p")];
+  let scatDirs = [];
+  function measureStory() {
+    const vw = innerWidth, vh = innerHeight;
+    scatDirs = scats.map(s => {
+      const x = s.offsetLeft + s.offsetWidth / 2 - vw / 2, y = s.offsetTop + s.offsetHeight / 2 - vh / 2;
+      const len = Math.hypot(x, y) || 1;
+      return { x: x / len, y: y / len };
+    });
+  }
+  function storyFrame() {
+    const vw = innerWidth, vh = innerHeight;
+    const p = clamp(-story.getBoundingClientRect().top / (story.offsetHeight - 2 * vh), 0, 1);
+    const pz = easeOut(clamp(p / 0.38, 0, 1));          // раскрытие «подушки»
+    const pw = clamp((p - 0.42) / 0.58, 0, 1);           // листание слов
+    const w0 = vw < 720 ? vw * 0.56 : Math.min(vw * 0.28, vh * 0.6 / 1.25), h0 = w0 * 1.25;
+    const w = lerp(w0, vw, pz), h = lerp(h0, vh, pz);
+    // форма подушки: большие одинаковые скругления по всем углам
+    const ix = (vw - w) / 2, iy = (vh - h) / 2, r = lerp(w0 * 0.26, 0, pz);
+    storyCenter.style.clipPath = `inset(${iy}px ${ix}px ${iy}px ${ix}px round ${r}px)`;
+    storyImg.style.transform = `scale(${lerp(1.25, 1, pz)})`;
+    storyShade.style.opacity = clamp((pz - 0.6) / 0.4, 0, 1);
+    const fly = pz * Math.max(vw, vh) * 0.6;
+    scats.forEach((s, i) => {
+      const d = scatDirs[i] || { x: 0, y: 0 };
+      s.style.transform = `translate(${d.x * fly}px, ${d.y * fly}px) scale(${1 + pz * 0.4})`;
+      s.style.opacity = 1 - clamp(pz * 1.4, 0, 1);
+    });
+    const n = words.length, pos = pw * (n - 1);
+    const a = Math.floor(pos), b = Math.min(n - 1, a + 1);
+    const x0 = words[0].offsetLeft;
+    track.style.transform = `translateX(${-lerp(words[a].offsetLeft - x0, words[b].offsetLeft - x0, pos - a)}px)`;
+    const appear = clamp((p - 0.34) / 0.08, 0, 1);
+    words.forEach((wd, i) => { wd.style.opacity = appear * (1 - Math.min(1, Math.abs(i - pos)) * 0.68); });
+    storyFree.style.opacity = appear;
+    const active = Math.round(pos);
+    subs.forEach((s, i) => s.classList.toggle("on", appear > 0.5 && i === active));
+  }
+
+  // Коллаж собирается из разлетевшихся фото, как галерея в конце видео (только на широком экране)
+  const collage = document.querySelector(".collage");
+  const collageFigs = [...collage.querySelectorAll("figure")];
+  const wideScreen = window.matchMedia("(min-width: 961px)");
+  let collageDirs = [];
+  function measureCollage() {
+    const left0 = collage.getBoundingClientRect().left;
+    collageDirs = collageFigs.map(f => ({
+      x: f.offsetLeft + f.offsetWidth / 2 - collage.offsetWidth / 2,
+      y: f.offsetTop + f.offsetHeight / 2 - collage.offsetHeight / 2,
+      left: left0 + f.offsetLeft, w: f.offsetWidth
+    }));
+  }
+  function collageFrame() {
+    if (!wideScreen.matches) { collageFigs.forEach(f => { f.style.transform = ""; }); return; }
+    const k = (1 - easeOut(clamp((innerHeight - collage.getBoundingClientRect().top) / (innerHeight * 0.95), 0, 1))) * 0.55;
+    const W = document.documentElement.clientWidth, pad = 8;
+    collageFigs.forEach((f, i) => {
+      const d = collageDirs[i], sc = 1 + k * 0.2;
+      // разлетевшееся фото не выходит за край экрана: иначе страница становится шире и съезжает вбок
+      let tx = d.x * k;
+      const half = d.w * sc / 2, mid = d.left + d.w / 2 + tx;
+      if (mid + half > W - pad) tx -= mid + half - (W - pad);
+      if (mid - half < pad) tx += pad - (mid - half);
+      f.style.transform = `translate(${tx}px, ${d.y * k}px) scale(${sc})`;
+    });
+  }
+
+  // Всё, что зависит от прокрутки, считаем в одном кадре
+  if (reduceMotion) story.classList.add("static");
+  function frame() {
+    if (!reduceMotion) { storyFrame(); collageFrame(); }
+    routeFrame();
+    revealFrame();
+    spyFrame();
+  }
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { ticking = false; frame(); });
+  }, { passive: true });
+  // пересчёт размеров: при смене ширины, после загрузки шрифтов и при смене языка (меняется высота текстов маршрута)
+  function remeasure() {
+    if (!reduceMotion) { measureStory(); measureCollage(); }
+    layoutRoute();
+    frame();
+  }
+  window.addEventListener("resize", remeasure);
+  window.addEventListener("load", remeasure);
+  if (document.fonts) document.fonts.ready.then(remeasure);
+  document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", remeasure));
+  remeasure();
+
+  // день доставки: не раньше завтрашнего
+  const dateInput = document.getElementById("fDate");
+  const setDeliveryDate = () => {
+    const t = new Date(Date.now() + 864e5);
+    dateInput.min = dateInput.value = new Date(t.getTime() - t.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  };
+  setDeliveryDate();
+
+  // Оформление заказа: проверка полей, короткая «загрузка», корзина очищается, показываем «Заказ оформлен»
+  document.getElementById("checkout").addEventListener("submit", e => {
+    e.preventDefault();
+    const d = T[lang];
+    const name = document.getElementById("fName").value.trim();
+    const digits = document.getElementById("fPhone").value.replace(/\D/g, "");
+    const addr = document.getElementById("fAddr").value.trim();
+    const consent = document.getElementById("fConsent").checked;
+    document.getElementById("eName").textContent = name ? "" : d.eName;
+    document.getElementById("ePhone").textContent = digits.length >= 8 ? "" : d.ePhone;
+    document.getElementById("eAddr").textContent = addr ? "" : d.eAddr;
+    document.getElementById("eConsent").textContent = consent ? "" : d.eConsent;
+    document.getElementById("eCart").textContent = items.length ? "" : d.eCart;
+    if (!name || digits.length < 8 || !addr || !consent || !items.length) return;
+    const btn = e.target.querySelector(".submit");
+    btn.classList.add("loading");
+    setTimeout(() => {
+      btn.classList.remove("loading");
+      items = [];
+      saveCart();
+      renderCart();
+      e.target.reset();
+      setDeliveryDate();
+      cart.dataset.step = "done";
+    }, reduceMotion ? 0 : 700);
+  });
+
+  const policy = document.getElementById("policy");
+  document.querySelectorAll(".open-policy").forEach(b => b.addEventListener("click", () => policy.showModal()));
+
+  // Название на первом экране не шире экрана при любом шрифте
+  const heroTitle = document.querySelector(".hero h1");
+  function fitTitle() {
+    heroTitle.style.fontSize = "";
+    const room = heroTitle.clientWidth;
+    const need = Math.max(heroTitle.scrollWidth, ...[...heroTitle.children].map(s => s.scrollWidth));
+    if (room && need > room) {
+      const size = parseFloat(getComputedStyle(heroTitle).fontSize);
+      heroTitle.style.fontSize = Math.floor(size * room / need * 0.97) + "px";
+    }
+  }
+  window.addEventListener("resize", fitTitle);
+  window.addEventListener("load", fitTitle);
+  if (document.fonts) document.fonts.ready.then(fitTitle);
+
+  fitTitle();
+  showPage(0);
+  onScroll();
+</script>
+</body>
+</html>
