@@ -375,6 +375,8 @@
   .cart-empty svg, .cart-done svg { width: 46px; height: 46px; margin: 0 auto 14px; color: var(--accent-2); }
   .cart-empty .btn, .cart-done .btn { margin-top: 18px; }
   .cart-done h3 { color: var(--text); margin-bottom: 10px; }
+  .order-no { color: var(--text); font-weight: 600; margin: 0 0 8px; }
+  .order-no:empty { display: none; }
   #checkout { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 14px; }
   .cart-back { grid-column: 1 / -1; justify-self: start; border: 0; background: none; padding: 4px 0 6px; color: var(--accent-2); font: 600 13px var(--sans); cursor: pointer; }
   .cart-foot { padding: 16px 28px calc(20px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: var(--surface); }
@@ -1183,9 +1185,8 @@
         <input class="box" id="fDate" type="date" data-i18n-aria="fDate">
         <select class="box" id="fPay" data-i18n-aria="payLbl">
           <option value="" disabled selected data-i18n="payLbl">Վճարում</option>
-          <option data-i18n="pay1">Առաքման ժամանակ</option>
-          <option data-i18n="pay2">Ապառիկով</option>
-          <option data-i18n="pay3">Քարտով առցանց</option>
+          <option value="delivery" data-i18n="pay1">Առաքման ժամանակ</option>
+          <option value="installment" data-i18n="pay2">Ապառիկով</option>
         </select>
         <textarea class="box full" id="fNote" rows="2" data-i18n-ph="phNote" placeholder="Մեկնաբանություն՝ գույն, հարկ, վերելակ (պարտադիր չէ)"></textarea>
         <label class="consent">
@@ -1194,12 +1195,16 @@
         </label>
         <span class="err" id="eConsent"></span>
         <span class="err" id="eCart"></span>
+        <!-- ловушка для спам-ботов: человек это поле не видит и не заполняет -->
+        <input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none">
+        <span class="err" id="eSend" role="alert"></span>
         <button class="submit" type="submit" data-i18n="send">Հաստատել պատվերը</button>
       </form>
       <div class="cart-done" role="status">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
         <h3 data-i18n="doneTitle">Պատվերը ձևակերպված է</h3>
-        <p data-i18n="doneText">Ցուցադրական տարբերակ. աշխատող կայքում պատվերը անմիջապես կհասնի սրահին Telegram-ով կամ WhatsApp-ով, իսկ քարտով վճարումը կմիացնենք բանկի միջոցով։</p>
+        <p class="order-no" id="orderNo"></p>
+        <p id="doneMsg" data-i18n="doneText">Ցուցադրական տարբերակ. աշխատող կայքում պատվերը անմիջապես կհասնի սրահին Telegram-ով կամ WhatsApp-ով, իսկ քարտով վճարումը կմիացնենք բանկի միջոցով։</p>
         <button class="btn btn-primary" type="button" data-close-cart data-i18n="close">Փակել</button>
       </div>
     </div>
@@ -1315,10 +1320,12 @@
       cartCheckout: "Ձևակերպել պատվերը", cartBack: "← Վերադառնալ զամբյուղ", cartRemove: "Հեռացնել", cartMinus: "Պակասեցնել քանակը", cartPlus: "Ավելացնել քանակը",
       phName: "Ձեր անունը", phPhone: "Հեռախոսահամար", phAddr: "Առաքման հասցե", phNote: "Մեկնաբանություն՝ գույն, հարկ, վերելակ (պարտադիր չէ)",
       fName: "Անուն", fPhone: "Հեռախոս", fAddr: "Հասցե", fDate: "Առաքման ցանկալի օրը",
-      payLbl: "Վճարում", pay1: "Առաքման ժամանակ", pay2: "Ապառիկով", pay3: "Քարտով առցանց",
+      payLbl: "Վճարում", pay1: "Առաքման ժամանակ", pay2: "Ապառիկով",
       consent: "Համաձայն եմ անձնական տվյալների մշակմանը՝ համաձայն", policyLink: "գաղտնիության քաղաքականության",
       send: "Հաստատել պատվերը", doneTitle: "Պատվերը ձևակերպված է",
-      doneText: "Ցուցադրական տարբերակ. աշխատող կայքում պատվերը անմիջապես կհասնի սրահին Telegram-ով կամ WhatsApp-ով, իսկ քարտով վճարումը կմիացնենք բանկի միջոցով։",
+      doneText: "Ցուցադրական տարբերակ. աշխատող կայքում պատվերը անմիջապես կհասնի սրահին Telegram-ով։",
+      doneSent: "Շնորհակալություն։ Պատվերն ուղարկված է սրահ։ Կզանգահարենք՝ հաստատելու գինը, առկայությունը և առաքման օրը։",
+      orderNo: "Պատվերի համարը՝", eSend: "Չհաջողվեց ուղարկել պատվերը։ Խնդրում ենք զանգահարել՝ +374 98 911 100",
       eName: "Լրացրեք անունը", ePhone: "Նշեք ճիշտ հեռախոսահամար", eAddr: "Նշեք առաքման հասցեն", eConsent: "Անհրաժեշտ է ձեր համաձայնությունը", eCart: "Զամբյուղը դատարկ է",
       visitTitle: "Ինչպես գտնել մեզ",
       addrLabel: "Հասցե", addr: "Աբովյան, Երևանյան 1/34", hoursLabel: "Ժամեր", hours: "Ճշտեք զանգով", phoneLabel: "Հեռախոս",
@@ -1386,10 +1393,12 @@
       cartCheckout: "Оформить заказ", cartBack: "← Назад к корзине", cartRemove: "Убрать", cartMinus: "Меньше", cartPlus: "Больше",
       phName: "Ваше имя", phPhone: "Номер телефона", phAddr: "Адрес доставки", phNote: "Комментарий: цвет, этаж, лифт (необязательно)",
       fName: "Имя", fPhone: "Телефон", fAddr: "Адрес", fDate: "Желаемый день доставки",
-      payLbl: "Оплата", pay1: "При доставке", pay2: "В рассрочку", pay3: "Картой онлайн",
+      payLbl: "Оплата", pay1: "При доставке", pay2: "В рассрочку",
       consent: "Согласен на обработку персональных данных согласно", policyLink: "политике конфиденциальности",
       send: "Подтвердить заказ", doneTitle: "Заказ оформлен",
-      doneText: "Это демо: в рабочей версии заказ сразу придёт салону в Telegram или WhatsApp, а оплату картой подключим через банк.",
+      doneText: "Это демо: в рабочей версии заказ сразу придёт салону в Telegram.",
+      doneSent: "Спасибо! Заказ отправлен в салон. Перезвоним, чтобы подтвердить цену, наличие и день доставки.",
+      orderNo: "Номер заказа:", eSend: "Не удалось отправить заказ. Позвоните, пожалуйста: +374 98 911 100",
       eName: "Укажите имя", ePhone: "Укажите верный номер телефона", eAddr: "Укажите адрес доставки", eConsent: "Нужно ваше согласие", eCart: "Корзина пуста",
       visitTitle: "Как нас найти",
       addrLabel: "Адрес", addr: "Абовян, ул. Ереванян, 1/34", hoursLabel: "Часы", hours: "Уточняйте по телефону", phoneLabel: "Телефон",
@@ -1457,10 +1466,12 @@
       cartCheckout: "Place order", cartBack: "← Back to cart", cartRemove: "Remove", cartMinus: "Fewer", cartPlus: "More",
       phName: "Your name", phPhone: "Phone number", phAddr: "Delivery address", phNote: "Comment: colour, floor, lift (optional)",
       fName: "Name", fPhone: "Phone", fAddr: "Address", fDate: "Preferred delivery date",
-      payLbl: "Payment", pay1: "On delivery", pay2: "In instalments", pay3: "Card online",
+      payLbl: "Payment", pay1: "On delivery", pay2: "In instalments",
       consent: "I agree to the processing of my personal data under the", policyLink: "privacy policy",
       send: "Confirm order", doneTitle: "Order placed",
-      doneText: "This is a demo: on the live site the order will go straight to the showroom via Telegram or WhatsApp, and card payment will be connected through a bank.",
+      doneText: "This is a demo: on the live site the order will go straight to the showroom via Telegram.",
+      doneSent: "Thank you! Your order has been sent to the showroom. We’ll call you to confirm the price, availability and delivery day.",
+      orderNo: "Order number:", eSend: "Couldn’t send the order. Please call +374 98 911 100",
       eName: "Please enter your name", ePhone: "Please enter a valid phone number", eAddr: "Please enter the delivery address", eConsent: "Your consent is required", eCart: "Your cart is empty",
       visitTitle: "How to find us",
       addrLabel: "Address", addr: "Abovyan, 1/34 Yerevanyan St.", hoursLabel: "Hours", hours: "Call to check", phoneLabel: "Phone",
@@ -1507,7 +1518,7 @@
     renderBook();
     renderCart();
     document.querySelectorAll("[data-count][data-done]").forEach(el => { el.textContent = fmtNum(parseFloat(el.dataset.count), +(el.dataset.dec || 0)); });
-    ["eName", "ePhone", "eAddr", "eConsent", "eCart"].forEach(id => { document.getElementById(id).textContent = ""; });
+    ["eName", "ePhone", "eAddr", "eConsent", "eCart", "eSend"].forEach(id => { document.getElementById(id).textContent = ""; });
     try { localStorage.setItem("elka-lang", lang); } catch (e) {}
   }
 
@@ -1951,7 +1962,33 @@
   };
   setDeliveryDate();
 
-  // Оформление заказа: проверка полей, короткая «загрузка», корзина очищается, показываем «Заказ оформлен»
+  // Заказы в Telegram: ссылка на веб-приложение Google Apps Script (sites/tools/telegram-orders, там же инструкция).
+  // Пусто — демо: заказ никуда не уходит. Токена бота здесь нет и не должно быть: репозиторий сайта публичный.
+  const ORDER_URL = "";
+  document.getElementById("doneMsg").dataset.i18n = ORDER_URL ? "doneSent" : "doneText";
+  // номер заказа видят и покупатель, и салон: E + месяц и день + три случайные цифры, например E1124-507
+  function orderId() {
+    const n = new Date(), p = v => String(v).padStart(2, "0");
+    return "E" + p(n.getMonth() + 1) + p(n.getDate()) + "-" + (100 + Math.floor(Math.random() * 900));
+  }
+  // салону всё приходит по-русски, независимо от языка сайта; цены и итог скрипт пересчитывает сам
+  function sendOrder(id) {
+    const v = k => document.getElementById(k).value.trim();
+    const pay = { delivery: T.ru.pay1, installment: T.ru.pay2 }[document.getElementById("fPay").value] || "";
+    const data = {
+      shop: "ELKA", id, lang,
+      name: v("fName"), phone: v("fPhone"), addr: v("fAddr"), date: v("fDate"), pay, note: v("fNote"),
+      items: items.map(x => {
+        const m = MODELS[x.i];
+        return { name: m.ru.n, type: m.ru.t, qty: x.q, price: m.price || 0, priceText: m.kitchen ? T.ru.priceMeasure : "цена уточняется" };
+      }),
+      hp: v("fWebsite")
+    };
+    // text/plain и no-cors: Google Apps Script принимает такой запрос без лишних проверок браузера
+    return fetch(ORDER_URL, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data) });
+  }
+
+  // Оформление заказа: проверка полей, отправка (или «загрузка» в демо), корзина очищается, показываем номер заказа
   document.getElementById("checkout").addEventListener("submit", e => {
     e.preventDefault();
     const d = T[lang];
@@ -1966,16 +2003,25 @@
     document.getElementById("eCart").textContent = items.length ? "" : d.eCart;
     if (!name || digits.length < 8 || !addr || !consent || !items.length) return;
     const btn = e.target.querySelector(".submit");
+    const eSend = document.getElementById("eSend");
+    const id = orderId();
+    eSend.textContent = "";
     btn.classList.add("loading");
-    setTimeout(() => {
+    const finish = ok => {
       btn.classList.remove("loading");
+      // не ушло — корзину и поля не трогаем, просим позвонить
+      if (!ok) { eSend.textContent = T[lang].eSend; return; }
+      document.getElementById("orderNo").textContent = T[lang].orderNo + " " + id;
+      document.getElementById("doneMsg").textContent = T[lang][ORDER_URL ? "doneSent" : "doneText"];
       items = [];
       saveCart();
       renderCart();
       e.target.reset();
       setDeliveryDate();
       cart.dataset.step = "done";
-    }, reduceMotion ? 0 : 700);
+    };
+    if (ORDER_URL) sendOrder(id).then(() => finish(true), () => finish(false));
+    else setTimeout(() => finish(true), reduceMotion ? 0 : 700);
   });
 
   const policy = document.getElementById("policy");
